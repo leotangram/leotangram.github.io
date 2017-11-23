@@ -1,66 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Leonardo Omaña - Portfoliot</title>
-	
-	<!-- Bootstrap Only -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
-	<!-- Para JS, Popper.js y jQuery -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
-	 <style>
-     /*Eliminar las margenes y los bordes del navbar*/
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-    
-    /* agregar un fondo gris (lo puedo cambiar) al footer y un relleno */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-    }
-  </style>
+  <title>Leonardo Omaña - Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="jumbotron">
-		<div class="container text-center">
-			<h1>Full Stack Rails Developer en Formación</h1>
-	  		<p>¡Hola! Mi nombre es Leo Omaña. Soy Full Stack Developer en formación, especializado en Páginas Web y me encanta!</p>
-  		</div>
-  	</div>
 
-  	<div class="container-fluid bg-3 text-center">
-  		<h3>Algo de lo que estoy haciendo</h3>
-  		<div class="row">
-  			<div class="col-sm-6">
-  				<h4>Make it Real</h4>
-  				<div class="text-left">
-  					<h6>Estudios en:</h6>
-  					<ul>
-	  					<li>HTML</li>
-	  					<li>CSS</li>
-	  					<li>Bootstrap</li>
-	  					<li>Git y Github</li>
-	  					<li>Ruby</li>
-	  					<li>HTTP y Sinatra</li>
-	  					<li>Ruby on Rails</li>
-	  					<li>JavaScript</li>
-	  					<li>jQuery y Ajax</li>
-  					</ul>
-  				</div>
-  				<a href="https://makeitreal.camp/u/leotangram" target="_blank"><img src="https://makeitreal.camp/assets/logoFooterMir@2x-4a89e056d9790645d616114c0d09fc0efacc4d8f6fd2d6e7831f3d845c62baa3.png" class="img-responsive" style="width:100%" alt="Make it Real">
-  				</a>
-  			</div>
-  		</div>
-  	</div>
+<!-- Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">HOME</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#aboutMe">ABOUT ME</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- First Container -->
+<div id="myPage" class="container-fluid bg-1 text-center"><br>
+  <h3 class="margin">Leo Omaña</h3>
+  <img src="https://scontent.fbog2-1.fna.fbcdn.net/v/t1.0-9/12004770_970795819607616_6459160695655377237_n.jpg?oh=0f367032fa845a1f2c595c27f70cda65&oe=5A959166" class="img-responsive img-circle margin" style="display:inline" alt="Leo" width="350" height="350">
+  <h3>Full Stack Rails Developer - In training</h3>
+  <h3>Music Producer & Composer</h3>
+</div>
+
+<!-- Second Container -->
+<div  id="aboutMe" class="container-fluid bg-2 text-center">
+  <h3 class="margin">About Me</h3>
+  <p>¡Hi! I'm Fulls Stack Developer - In Training, Specialized in Web Pages, with knowledge in HTML, CSS, Bootstrap, JavaScript, Ruby, Ruby on Rails, HTTP & Sinatra, jQuery and AJAX.</p>
+  <p>Also I'm Music Producer and Composer, Specialized in Recording, Editing, Folly and music for Radio and TV Commercials</p>
+  <p>I am passioned for Web programming and Music, with a young and ready to learn spirit</p>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey ">
+  <h2>Portfolio</h2><br>
+  
+  <h2>What I've done</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h3>-Full Stack Rails Developer-</h3>
+        <div class="col-sm-6">
+          <p>BootCamp on Make it Real</p>
+          <a href="https://makeitreal.camp/u/leotangram" target="_blank">
+            <img width="560" height="315" src="https://udemy-images.udemy.com/course/750x422/625204_436a_2.jpg" alt="imgFullStackDevelopment">
+          </a>
+        </div>
+        <div class="col-sm-6">
+          <p>Leonardo Omaña - Portfolio</p>
+          <a href="https://leotangram.github.io/" target="_blank">
+            <img width="560" height="315" src="img/leotangram.png">
+          </a>
+        </div>
+      </div>
+      <div class="item">
+        <h3>-Production and musical composition-</h3>
+        <div class="col-sm-6"><p>Manager at Free Boat Producciones</p>
+          <a href="http://www.freeboatproducciones.com/servicios" target="_blank">
+            <img width="560" height="315" src="https://scontent.fbog2-1.fna.fbcdn.net/v/t1.0-9/18157674_1420425507977976_8021040722948120377_n.jpg?oh=887fc93b4008d0246091dd8179da3a40&oe=5A88F61E" alt="">
+          </a>
+        </div>
+        <div class="col-sm-6">
+          <p>Production and audio production for "Sim Supersónica de ETB 2017"</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/1JsGWxovEWM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="col-sm-6">
+          <p>Audio production, video editing for "Mitsubishi Agribusiness Fair"</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Ix5OgiSCVSE" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="col-sm-6">
+          <p>Live music - Blog</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/7zS9ee1ht8I" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="item">
+        <h3>"Songwriter"</h3>
+        <p>Leo Omaña - Music Proyect</p>
+        <div class="col-sm-6">
+          <p>El viaje</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/QcpL8B7nGLk" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="col-sm-6">
+          <p>End of Days</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/DGnr1Nn5smY" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div>
+          <p>Live</p>
+          <img src="https://scontent.fbog2-1.fna.fbcdn.net/v/t1.0-9/11042652_881695931850939_5427462481987879077_n.jpg?oh=c81373df1333baf7868ee67ab08d2b64&oe=5A8B09E0" alt="Leo Omaña - Music">
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Third Container (Grid) -->
+<div class="container-fluid bg-3 text-center">    
+  <h3 class="margin">Contact</h3><br>
+  <div class="row">
+    <div class="col-sm-12">
+      <form action="https://formspree.io/leotangram@gmail.com"
+      method="POST">
+      <input type="text" name="name" placeholder="text">
+      <input type="email" name="_replyto" placeholder= "your email">
+      <input type="submit" value="Send">
+</form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p>Leonardo Omaña - Portfolio - 2017 - All Rigths Reserved - <a href="leotangram.github.io">   leotangram.github.io</a></p> 
+</footer>
 
 </body>
 </html>
-
-
-
