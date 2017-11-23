@@ -6,11 +6,11 @@
   p {font-size: 16px;}
   .margin {margin-bottom: 45px;}
   .bg-1 { 
-      background-color: CadetBlue ;  /*Cadet Blue */
+      background-color: CadetBlue ;
       color: #ffffff;
   }
   .bg-2 { 
-      background-color: DarkSlateGray ;  /*Dark Slate Gray */
+      background-color: DarkSlateGray ;
       color: #ffffff;
   }
 
@@ -20,11 +20,11 @@
   }
 
   .bg-3 { 
-      background-color: #ffffff;  /*White */
+      background-color: #ffffff;
       color: #555555;
   }
   .bg-4 { 
-      background-color: #2f2f2f;  /*Black Gray */
+      background-color: #2f2f2f;
       color: #fff;
   }
   .container-fluid {
