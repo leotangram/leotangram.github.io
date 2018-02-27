@@ -50,7 +50,7 @@
     border-radius: 8px;
     max-width: 100%;
     height: auto;
-}
+  }
 
 /*.carrusel-size {
   width: 560;
@@ -63,4 +63,8 @@ iframe {
     /*border-radius: 8px;*/
     max-width: 100%;
     /*height: auto;*/
+}
+
+.i {
+  font-size: 60px;
 }
