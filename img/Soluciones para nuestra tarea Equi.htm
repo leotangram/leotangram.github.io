@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://blog.codility.com/2011/03/solutions-for-task-equi.html -->
+<html class="no-js translated-ltr" lang="en-us"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>.hs-cta-wrapper p, .hs-cta-wrapper div { margin: 0; padding: 0; } a#cta_button_2502692_1f040683-6f1b-4cee-95cf-71c375ffb45b {
+  -webkit-font-smoothing:antialiased !important; 
+  cursor:pointer !important; 
+  -moz-user-select:none !important; 
+  -webkit-user-select:none !important; 
+  -o-user-select:none !important; 
+  user-select:none !important; 
+  display:inline-block !important; 
+  font-weight:normal !important; 
+  text-align:center !important; 
+  text-decoration:none !important; 
+  font-family:sans-serif !important; 
+  background:rgb(83,205,242) !important; 
+  color:rgb(255, 255, 255) !important; 
+  border-radius:4px !important; 
+  border-width:0px !important; 
+  transition:all .4s ease !important; 
+  -moz-transition:all .4s ease !important; 
+  -webkit-transition:all .4s ease !important; 
+  -o-transition:all .4s ease !important; 
+  text-shadow:none !important; 
+  line-height:1.5em !important; 
+  padding:6px 18px !important; 
+}
+a#cta_button_2502692_1f040683-6f1b-4cee-95cf-71c375ffb45b:hover {
+background:rgb(91,225,255) !important; 
+color:rgb(255,255,255) !important; 
+}
+a#cta_button_2502692_1f040683-6f1b-4cee-95cf-71c375ffb45b:active, #cta_button_2502692_1f040683-6f1b-4cee-95cf-71c375ffb45b:active:hover {
+background:rgb(66,164,193) !important; 
+color:rgb(244,244,244) !important; 
+}
+
+</style><script src="./Soluciones para nuestra tarea Equi_files/2502692.js" type="text/javascript" id="hs-analytics"></script><script id="twitter-wjs" src="./Soluciones para nuestra tarea Equi_files/widgets.js"></script><script type="text/javascript" async="" src="./Soluciones para nuestra tarea Equi_files/platform.js" gapi_processed="true"></script><script id="facebook-jssdk" src="./Soluciones para nuestra tarea Equi_files/all.js"></script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="Tomasz Waleń">
+    <meta name="description" content="Codility&#39;s free Equi task is where coders practice and prepare before taking a Codility assessment. Here&#39;s our guide to getting the perfect score!">
+    <meta name="generator" content="HubSpot">
+    <title>Soluciones para nuestra tarea Equi</title>
+    <link rel="shortcut icon" href="https://blog.codility.com/hubfs/Codility-Sep2016/Image/favicon.ico">
+    
+
+    <link rel="stylesheet" href="./Soluciones para nuestra tarea Equi_files/combined-css-40b1ed14be09f3bce0e220cab00bec0b.css"><script type="text/javascript" async="" src="./Soluciones para nuestra tarea Equi_files/insight.min.js"></script><script async="" src="./Soluciones para nuestra tarea Equi_files/gtm.js"></script><script async="" src="./Soluciones para nuestra tarea Equi_files/analytics.js"></script><script src="./Soluciones para nuestra tarea Equi_files/jquery-1.7.1.js"></script>
+    <script type="text/javascript">hsjQuery = window['jQuery']</script>
+    
+    <meta property="og:description" content="Codility&#39;s free Equi task is where coders practice and prepare before taking a Codility assessment. Here&#39;s our guide to getting the perfect score!">
+    <meta property="og:title" content="Solutions for our Equi Task">
+    <meta name="twitter:description" content="Codility&#39;s free Equi task is where coders practice and prepare before taking a Codility assessment. Here&#39;s our guide to getting the perfect score!">
+    <meta name="twitter:title" content="Solutions for our Equi Task">
+
+
+    
+    
+
+    
+<!--  Added by GoogleAnalytics integration -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-10522543-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<!-- /Added by GoogleAnalytics integration -->
+
+    
+<!--  Added by AdRoll integration -->
+<script type="text/javascript">
+  adroll_adv_id = "TWWN4SOREBDJFD34AOTGGI";
+  adroll_pix_id = "DNJHG72SLJDP5HFSNQB4P7";
+  (function () {
+      var _onload = function(){
+          if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+          if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+          var scr = document.createElement("script");
+          var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+          scr.setAttribute('async', 'true');
+          scr.type = "text/javascript";
+          scr.src = host + "/j/roundtrip.js";
+          ((document.getElementsByTagName('head') || [null])[0] ||
+              document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      };
+      if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+      else {window.attachEvent('onload', _onload)}
+  }());
+</script>
+<!-- /Added by AdRoll integration -->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="ePVjuxiYZJtijJFfnggWzqv-qMuMlyDKIEL1VHi65bM">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K7RZ7WB');</script>
+<!-- End Google Tag Manager -->
+<!-- LinkedIn Insight Tag -->
+<script type="text/javascript">
+_linkedin_data_partner_id = "12616";
+</script><script type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+&amp;lt;img  height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=12616&amp;amp;amp;fmt=gif"&amp;gt;
+</noscript>
+<!-- End Insight Tag -->
+<meta property="og:image" content="https://blog.codility.com/hubfs/Blog_Images/photo-1429051883746-afd9d56fbdaf.jpeg#keepProtocol">
+<meta property="og:image:width" content="5472">
+<meta property="og:image:height" content="3648">
+<meta name="twitter:image" content="https://blog.codility.com/hubfs/Blog_Images/photo-1429051883746-afd9d56fbdaf.jpeg#keepProtocol">
+
+<meta property="og:url" content="https://blog.codility.com/2011/03/solutions-for-task-equi.html">
+
+<link rel="canonical" href="https://blog.codility.com/2011/03/solutions-for-task-equi.html">
+
+<meta property="og:type" content="article">
+<link rel="alternate" type="application/rss+xml" href="https://blog.codility.com/rss.xml">
+<meta name="twitter:domain" content="blog.codility.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@codility">
+<script src="./Soluciones para nuestra tarea Equi_files/in.js" type="text/javascript">
+    lang: en_US
+</script><script src="./Soluciones para nuestra tarea Equi_files/secureAnonymousFramework"></script>
+
+<meta http-equiv="content-language" content="en-us">
+
+
+
+
+
+
+
+
+    <!-- The style tag has been deprecated. Attached stylesheets are included in the required_head_tags page variable. -->
+    <!-- The style tag has been deprecated. Attached stylesheets are included in the required_head_tags page variable. -->
+<script src="./Soluciones para nuestra tarea Equi_files/jquery.min.js"></script>
+<script type="text/javascript" src="./Soluciones para nuestra tarea Equi_files/infiniteajaxscroll.min.js"></script>
+   <script type="text/javascript">
+    var ias = $.ias({
+      container : '.post-listing',
+    item: '.post-item',
+    pagination: '.blog-pagination',
+    next: '.next-posts-link',
+    });
+
+    ias.extension(new IASSpinnerExtension());
+    //ias.extension(new IASTriggerExtension({offset: 3}));
+    //ias.extension(new IASNoneLeftExtension({text: 'There are no more pages left to load.'}));
+  </script>
+
+<script>
+$(document).ready(function(){
+     $(window).scroll(function() {
+             if($(window).scrollTop() + $(window).height() >= ($(document).height() - finaHeight)) {
+            
+            loadMorePost();
+        }
+    });
+
+});
+
+function loadMorePost(){
+    
+    
+    $("#loadMore").show();
+    setInterval(function(){
+        $("#loadMore").hide(); 
+    }, 1000);
+    $(".post-item:hidden").slice(0, 1).fadeIn(2000);
+    
+    var cnt = $(".post-item:hidden").length;
+    if(cnt == 0){
+        $("#loadMore").hide();
+    }
+}
+</script>
+    
+
+<style type="text/css">.comment-reply-to{background:url("https://static.hsappstatic.net/pictos_images/static-1.25/img/pictos-1-png/16/pictos-set1-21.png") no-repeat 5px;border:none;padding-left:25px;color:#333}.replying{padding-left:2em}.comment-from,.comment-date{display:inline-block}.comment-from h4{font-size:1.2em;font-weight:bold}.comment-date{font-size:0.8em;color:#666}#comment-form h4{font-size:1.4em}.comment.depth-0{border-top:2px solid #eee;padding-top:2em;margin-top:2em}.comment.depth-0:first-child{margin-top:0}.comment.depth-1{padding-left:2em}.comment.depth-2{padding-left:4em}.comment.depth-3{padding-left:6em}.comment.depth-4{padding-left:8em}.comment.depth-5{padding-left:10em}.comment.depth-6{padding-left:12em}.comment.depth-7{padding-left:14em}.comment.depth-8{padding-left:16em}.comment.depth-9{padding-left:18em}.shuffle{display:none}.hs_subscribe ul{padding-left:0}.hs_subscribe li{list-style:none}</style><script type="text/javascript" async="" src="./Soluciones para nuestra tarea Equi_files/loader-v2.js"></script><style type="text/css" id="hs-form-style3ae05b02-d5b2-4b71-8179-284fc638c29d_eb6036ac-a406-4cee-9543-624d6db80b87">.fn-date-picker.pika-single{z-index:9999;display:block;position:relative;color:#333;background:#fff;border:1px solid #ccc;border-bottom-color:#bbb;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;*zoom:1}.fn-date-picker.pika-single.is-hidden{display:none}.fn-date-picker.pika-single.is-bound{position:absolute;box-shadow:0 5px 15px -5px rgba(0,0,0,0.5)}.fn-date-picker.pika-single:before,.fn-date-picker.pika-single:after{content:" ";display:table}.fn-date-picker.pika-single:after{clear:both}.fn-date-picker .pika-lendar{float:left;width:240px;margin:8px}.fn-date-picker .pika-title{position:relative;text-align:center}.fn-date-picker .pika-title select{cursor:pointer;position:absolute;z-index:9998;margin:0;left:0;top:5px;filter:alpha(opacity=0);opacity:0}.fn-date-picker .pika-label{display:inline-block;*display:inline;position:relative;z-index:9999;overflow:hidden;margin:0;padding:5px 3px;font-size:14px;line-height:20px;font-weight:bold;background-color:#fff}.fn-date-picker .pika-prev,.fn-date-picker .pika-next{display:block;cursor:pointer;position:relative;outline:none;border:0;padding:0;width:20px;height:30px;text-indent:20px;white-space:nowrap;overflow:hidden;background-color:transparent;background-position:center center;background-repeat:no-repeat;background-size:75% 75%;opacity:0.5;*position:absolute;*top:0}.fn-date-picker .pika-prev:hover,.fn-date-picker .pika-next:hover{opacity:1}.fn-date-picker .pika-prev.is-disabled,.fn-date-picker .pika-next.is-disabled{cursor:default;opacity:0.2}.fn-date-picker .pika-prev,.fn-date-picker .is-rtl .pika-next{float:left;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==");*left:0}.fn-date-picker .pika-next,.fn-date-picker .is-rtl .pika-prev{float:right;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=");*right:0}.fn-date-picker .pika-select{display:inline-block;*display:inline}.fn-date-picker .pika-table{width:100%;border-collapse:collapse;border-spacing:0;border:0}.fn-date-picker .pika-table th,.fn-date-picker .pika-table td{width:14.28571%;padding:0}.fn-date-picker .pika-table th{color:#999;font-size:12px;line-height:25px;font-weight:bold;text-align:center}.fn-date-picker .pika-table abbr{border-bottom:none;cursor:help}.fn-date-picker .pika-button{cursor:pointer;display:block;-moz-box-sizing:border-box;box-sizing:border-box;outline:none;border:0;margin:0;width:100%;padding:5px;color:#666;font-size:12px;line-height:15px;text-align:right;background:#f5f5f5}.fn-date-picker .pika-button:hover{color:#fff !important;background:#ff8000 !important;box-shadow:none !important;border-radius:3px !important}.fn-date-picker .is-today .pika-button{color:#3af;font-weight:bold}.fn-date-picker .is-selected .pika-button{color:#fff;font-weight:bold;background:#3af;box-shadow:inset 0 1px 3px #178fe5;border-radius:3px}.fn-date-picker .is-disabled .pika-button{pointer-events:none;cursor:default;color:#999;opacity:0.3}.fn-date-picker .pika-week{font-size:11px;color:#999}.hs-form-3ae05b02-d5b2-4b71-8179-284fc638c29d_eb6036ac-a406-4cee-9543-624d6db80b87 fieldset{border:0;padding:0;margin:0;max-width:500px}.hs-form-3ae05b02-d5b2-4b71-8179-284fc638c29d_eb6036ac-a406-4cee-9543-624d6db80b87 fieldset.form-columns-1 .hs-input{width:95%}.hs-form-3ae05b02-d5b2-4b71-8179-284fc638c29d_eb6036ac-a406-4cee-9543-624d6db80b87 fieldset.form-columns-1 .input{margin-right:8px}.hs-form-3ae05b02-d5b2-4b71-8179-284fc638c29d_eb6036ac-a406-4cee-9543-624d6db80b87 fieldset.form-columns-1 input[type="checkbox"],.hs-form-3ae05b02-d5b2-4b71-8179-284fc638c29d_eb6036ac-a406-4cee-9543-624d6db80b87 fieldset.form-columns-1 input[type="radio"]{width:auto}.hs-form-3ae05b02-d5b2-4b71-8179-284fc638c29d_eb6036ac-a406-4cee-9543-624d6db80b87 fieldset.form-columns-2 .hs-form-field{width:50%;float:left}.hs-form-3ae05b02-d5b2-4b71-8179-284fc638c29d_eb6036ac-a406-4cee-9543-624d6db80b87 fieldset.form-columns-2 .input{margin-right:8px}.hs-form-3ae05b02-d5b2-4b71-8179-284fc638c29d_eb6036ac-a406-4cee-9543-624d6db80b87 fieldset.form-columns-3 .hs-form-field{width:32.7%;float:left}.hs-form-3ae05b02-d5b2-4b71-8179-284fc638c29d_eb6036ac-a406-4cee-9543-624d6db80b87 fieldset.form-columns-3 .input{margin-right:8px}.hs-form-3ae05b02-d5b2-4b71-8179-284fc638c29d_eb6036ac-a406-4cee-9543-624d6db80b87 label.hs-hidden{visibility:hidden}.hs-form-3ae05b02-d5b2-4b71-8179-284fc638c29d_eb6036ac-a406-4cee-9543-624d6db80b87 .hs-field-desc{width:100%}.hsformerror{margin:0 0 2px;padding:2px 6px;height:auto;background-color:#fdd2d0;font-size:11px;border:1px solid #fcb3af;padding:4px 16px 4px 10px;color:#000;display:none;background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fefefe), color-stop(100%, #fdd2d0));background-image:-webkit-linear-gradient(#fefefe, #fdd2d0);background-image:-moz-linear-gradient(#fefefe, #fdd2d0);background-image:-o-linear-gradient(#fefefe, #fdd2d0);background-image:linear-gradient(#fefefe,#fdd2d0);-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:4px;-webkit-box-shadow:0 0 6px #ddd;-moz-box-shadow:0 0 6px #ddd;box-shadow:0 0 6px #ddd;z-index:99999}.hsformerror em{border:10px solid;border-color:#fdd2d0 transparent transparent;bottom:-17px;display:block;height:0;left:60px;position:absolute;width:0}.hsformerror p{font-family:Lucida Grande,Lucida Sans Unicode,bitstream vera sans,trebuchet ms,verdana,sans-serif;margin:0;float:left;margin-right:8px}.hsformerror:hover{cursor:default}.hsformerror .close-form-error{float:right;display:inline;top:3px;position:absolute;font-family:Verdana !important;color:#b17c79 !important;cursor:pointer !important;font-size:11px !important;font-weight:normal !important}.hsformerror .close-form-error:hover{color:#cc8884}@media (max-width: 400px), (min-device-width: 320px) and (max-device-width: 480px){form.hs-form-3ae05b02-d5b2-4b71-8179-284fc638c29d_eb6036ac-a406-4cee-9543-624d6db80b87 .form-columns-2 .hs-form-field,form.hs-form-3ae05b02-d5b2-4b71-8179-284fc638c29d_eb6036ac-a406-4cee-9543-624d6db80b87 .form-columns-3 .hs-form-field{float:none;width:100%}form.hs-form-3ae05b02-d5b2-4b71-8179-284fc638c29d_eb6036ac-a406-4cee-9543-624d6db80b87 .form-columns-2 .hs-form-field .hs-input,form.hs-form-3ae05b02-d5b2-4b71-8179-284fc638c29d_eb6036ac-a406-4cee-9543-624d6db80b87 .form-columns-3 .hs-form-field .hs-input{width:95%}form.hs-form-3ae05b02-d5b2-4b71-8179-284fc638c29d_eb6036ac-a406-4cee-9543-624d6db80b87 .form-columns-2 .hs-form-field input[type="checkbox"],form.hs-form-3ae05b02-d5b2-4b71-8179-284fc638c29d_eb6036ac-a406-4cee-9543-624d6db80b87 .form-columns-2 .hs-form-field input[type="radio"],form.hs-form-3ae05b02-d5b2-4b71-8179-284fc638c29d_eb6036ac-a406-4cee-9543-624d6db80b87 .form-columns-3 .hs-form-field input[type="checkbox"],form.hs-form-3ae05b02-d5b2-4b71-8179-284fc638c29d_eb6036ac-a406-4cee-9543-624d6db80b87 .form-columns-3 .hs-form-field input[type="radio"]{width:auto}}</style><script type="text/javascript" async="" src="./Soluciones para nuestra tarea Equi_files/cta-loaded.js"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_customer_chat_bounce_in{animation-duration:250ms;animation-name:fb_bounce_in}.fb_customer_chat_bounce_out{animation-duration:250ms;animation-name:fb_fade_out}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_mobile_overlay_active{background-color:#fff;height:100%;overflow:hidden;position:fixed;visibility:hidden;width:100%}@keyframes fb_fade_out{from{opacity:1}to{opacity:0}}@keyframes fb_bounce_in{0%{opacity:0;transform:scale(.8, .8);transform-origin:100% 100%}10%{opacity:.1}20%{opacity:.2}30%{opacity:.3}40%{opacity:.4}50%{opacity:.5}60%{opacity:.6}70%{opacity:.7}80%{opacity:.8;transform:scale(1.03, 1.03)}90{opacity:.9}100%{opacity:1;transform:scale(1, 1)}}</style><script async="true" type="text/javascript" src="https://s.adroll.com/j/roundtrip.js"></script><style type="text/css" id="hs-form-style89a6c0c3-7362-4b15-b5cd-ae73593d215c_2bd3affc-786c-4c6c-8ce9-fe50c780e0ae">.fn-date-picker.pika-single{z-index:9999;display:block;position:relative;color:#333;background:#fff;border:1px solid #ccc;border-bottom-color:#bbb;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;*zoom:1}.fn-date-picker.pika-single.is-hidden{display:none}.fn-date-picker.pika-single.is-bound{position:absolute;box-shadow:0 5px 15px -5px rgba(0,0,0,0.5)}.fn-date-picker.pika-single:before,.fn-date-picker.pika-single:after{content:" ";display:table}.fn-date-picker.pika-single:after{clear:both}.fn-date-picker .pika-lendar{float:left;width:240px;margin:8px}.fn-date-picker .pika-title{position:relative;text-align:center}.fn-date-picker .pika-title select{cursor:pointer;position:absolute;z-index:9998;margin:0;left:0;top:5px;filter:alpha(opacity=0);opacity:0}.fn-date-picker .pika-label{display:inline-block;*display:inline;position:relative;z-index:9999;overflow:hidden;margin:0;padding:5px 3px;font-size:14px;line-height:20px;font-weight:bold;background-color:#fff}.fn-date-picker .pika-prev,.fn-date-picker .pika-next{display:block;cursor:pointer;position:relative;outline:none;border:0;padding:0;width:20px;height:30px;text-indent:20px;white-space:nowrap;overflow:hidden;background-color:transparent;background-position:center center;background-repeat:no-repeat;background-size:75% 75%;opacity:0.5;*position:absolute;*top:0}.fn-date-picker .pika-prev:hover,.fn-date-picker .pika-next:hover{opacity:1}.fn-date-picker .pika-prev.is-disabled,.fn-date-picker .pika-next.is-disabled{cursor:default;opacity:0.2}.fn-date-picker .pika-prev,.fn-date-picker .is-rtl .pika-next{float:left;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==");*left:0}.fn-date-picker .pika-next,.fn-date-picker .is-rtl .pika-prev{float:right;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=");*right:0}.fn-date-picker .pika-select{display:inline-block;*display:inline}.fn-date-picker .pika-table{width:100%;border-collapse:collapse;border-spacing:0;border:0}.fn-date-picker .pika-table th,.fn-date-picker .pika-table td{width:14.28571%;padding:0}.fn-date-picker .pika-table th{color:#999;font-size:12px;line-height:25px;font-weight:bold;text-align:center}.fn-date-picker .pika-table abbr{border-bottom:none;cursor:help}.fn-date-picker .pika-button{cursor:pointer;display:block;-moz-box-sizing:border-box;box-sizing:border-box;outline:none;border:0;margin:0;width:100%;padding:5px;color:#666;font-size:12px;line-height:15px;text-align:right;background:#f5f5f5}.fn-date-picker .pika-button:hover{color:#fff !important;background:#ff8000 !important;box-shadow:none !important;border-radius:3px !important}.fn-date-picker .is-today .pika-button{color:#3af;font-weight:bold}.fn-date-picker .is-selected .pika-button{color:#fff;font-weight:bold;background:#3af;box-shadow:inset 0 1px 3px #178fe5;border-radius:3px}.fn-date-picker .is-disabled .pika-button{pointer-events:none;cursor:default;color:#999;opacity:0.3}.fn-date-picker .pika-week{font-size:11px;color:#999}.hs-form-89a6c0c3-7362-4b15-b5cd-ae73593d215c_2bd3affc-786c-4c6c-8ce9-fe50c780e0ae fieldset{border:0;padding:0;margin:0;max-width:500px}.hs-form-89a6c0c3-7362-4b15-b5cd-ae73593d215c_2bd3affc-786c-4c6c-8ce9-fe50c780e0ae fieldset.form-columns-1 .hs-input{width:95%}.hs-form-89a6c0c3-7362-4b15-b5cd-ae73593d215c_2bd3affc-786c-4c6c-8ce9-fe50c780e0ae fieldset.form-columns-1 .input{margin-right:8px}.hs-form-89a6c0c3-7362-4b15-b5cd-ae73593d215c_2bd3affc-786c-4c6c-8ce9-fe50c780e0ae fieldset.form-columns-1 input[type="checkbox"],.hs-form-89a6c0c3-7362-4b15-b5cd-ae73593d215c_2bd3affc-786c-4c6c-8ce9-fe50c780e0ae fieldset.form-columns-1 input[type="radio"]{width:auto}.hs-form-89a6c0c3-7362-4b15-b5cd-ae73593d215c_2bd3affc-786c-4c6c-8ce9-fe50c780e0ae fieldset.form-columns-2 .hs-form-field{width:50%;float:left}.hs-form-89a6c0c3-7362-4b15-b5cd-ae73593d215c_2bd3affc-786c-4c6c-8ce9-fe50c780e0ae fieldset.form-columns-2 .input{margin-right:8px}.hs-form-89a6c0c3-7362-4b15-b5cd-ae73593d215c_2bd3affc-786c-4c6c-8ce9-fe50c780e0ae fieldset.form-columns-3 .hs-form-field{width:32.7%;float:left}.hs-form-89a6c0c3-7362-4b15-b5cd-ae73593d215c_2bd3affc-786c-4c6c-8ce9-fe50c780e0ae fieldset.form-columns-3 .input{margin-right:8px}.hs-form-89a6c0c3-7362-4b15-b5cd-ae73593d215c_2bd3affc-786c-4c6c-8ce9-fe50c780e0ae label.hs-hidden{visibility:hidden}.hs-form-89a6c0c3-7362-4b15-b5cd-ae73593d215c_2bd3affc-786c-4c6c-8ce9-fe50c780e0ae .hs-field-desc{width:100%}.hsformerror{margin:0 0 2px;padding:2px 6px;height:auto;background-color:#fdd2d0;font-size:11px;border:1px solid #fcb3af;padding:4px 16px 4px 10px;color:#000;display:none;background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fefefe), color-stop(100%, #fdd2d0));background-image:-webkit-linear-gradient(#fefefe, #fdd2d0);background-image:-moz-linear-gradient(#fefefe, #fdd2d0);background-image:-o-linear-gradient(#fefefe, #fdd2d0);background-image:linear-gradient(#fefefe,#fdd2d0);-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:4px;-webkit-box-shadow:0 0 6px #ddd;-moz-box-shadow:0 0 6px #ddd;box-shadow:0 0 6px #ddd;z-index:99999}.hsformerror em{border:10px solid;border-color:#fdd2d0 transparent transparent;bottom:-17px;display:block;height:0;left:60px;position:absolute;width:0}.hsformerror p{font-family:Lucida Grande,Lucida Sans Unicode,bitstream vera sans,trebuchet ms,verdana,sans-serif;margin:0;float:left;margin-right:8px}.hsformerror:hover{cursor:default}.hsformerror .close-form-error{float:right;display:inline;top:3px;position:absolute;font-family:Verdana !important;color:#b17c79 !important;cursor:pointer !important;font-size:11px !important;font-weight:normal !important}.hsformerror .close-form-error:hover{color:#cc8884}@media (max-width: 400px), (min-device-width: 320px) and (max-device-width: 480px){form.hs-form-89a6c0c3-7362-4b15-b5cd-ae73593d215c_2bd3affc-786c-4c6c-8ce9-fe50c780e0ae .form-columns-2 .hs-form-field,form.hs-form-89a6c0c3-7362-4b15-b5cd-ae73593d215c_2bd3affc-786c-4c6c-8ce9-fe50c780e0ae .form-columns-3 .hs-form-field{float:none;width:100%}form.hs-form-89a6c0c3-7362-4b15-b5cd-ae73593d215c_2bd3affc-786c-4c6c-8ce9-fe50c780e0ae .form-columns-2 .hs-form-field .hs-input,form.hs-form-89a6c0c3-7362-4b15-b5cd-ae73593d215c_2bd3affc-786c-4c6c-8ce9-fe50c780e0ae .form-columns-3 .hs-form-field .hs-input{width:95%}form.hs-form-89a6c0c3-7362-4b15-b5cd-ae73593d215c_2bd3affc-786c-4c6c-8ce9-fe50c780e0ae .form-columns-2 .hs-form-field input[type="checkbox"],form.hs-form-89a6c0c3-7362-4b15-b5cd-ae73593d215c_2bd3affc-786c-4c6c-8ce9-fe50c780e0ae .form-columns-2 .hs-form-field input[type="radio"],form.hs-form-89a6c0c3-7362-4b15-b5cd-ae73593d215c_2bd3affc-786c-4c6c-8ce9-fe50c780e0ae .form-columns-3 .hs-form-field input[type="checkbox"],form.hs-form-89a6c0c3-7362-4b15-b5cd-ae73593d215c_2bd3affc-786c-4c6c-8ce9-fe50c780e0ae .form-columns-3 .hs-form-field input[type="radio"]{width:auto}}</style><link type="text/css" rel="stylesheet" charset="UTF-8" href="./Soluciones para nuestra tarea Equi_files/translateelement.css"></head>
+<body class="hs-content-id-4630875780 hs-blog-post hs-blog-id-4324893661 vsc-initialized" style="">
+    <div id="site-wrapper"><div class="header-container-wrapper">
+    <div class="header-container container-fluid">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-global_group " style="" data-widget-type="global_group" data-x="0" data-w="12">
+<!-- start coded_template: id:4383572124 path:generated_global_groups/4383572119.html -->
+<div class="" data-global-widget-path="generated_global_groups/4383572119.html"><div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell custom-header-background" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell page-center custom-desktop-menu" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+<div class="row-fluid ">
+<div class="span4 widget-span widget-type-raw_html custom-logo" style="" data-widget-type="raw_html" data-x="0" data-w="4">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_14752143682095589" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html"><a href="https://codility.com/">
+<i class="icon custom-codility_logo" title="Codilidad"></i>
+</a></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+<div class="span8 widget-span widget-type-menu custom-menu-primary " style="" data-widget-type="menu" data-x="4" data-w="8">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_13884994340213" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_module_13884994340213" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="Codility-Sep2016-Sitemap">
+ <a class="close-icon"><span></span></a><ul>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children"><a href="javascript:;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Soluciones</font></font></a>
+   <ul class="hs-menu-children-wrapper"><div class="menu-inner-div">
+    <li class="hs-menu-item hs-menu-depth-2 hs-item-has-children"><a href="javascript:;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fuente</font></font></a>
+     <ul class="hs-menu-children-wrapper">
+      <li class="hs-menu-item hs-menu-depth-3"><a href="javascript:;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aumente su visibilidad y amplíe su grupo de talentos</font></font></a></li>
+      <li class="hs-menu-item hs-menu-depth-3"><a href="https://codility.com/sourcing/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aprende más</font></font></a></li>
+     </ul></li>
+    <li class="hs-menu-item hs-menu-depth-2 hs-item-has-children"><a href="javascript:;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Evaluar</font></font></a>
+     <ul class="hs-menu-children-wrapper">
+      <li class="hs-menu-item hs-menu-depth-3"><a href="javascript:;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Crea pruebas usando nuestra gran cantidad de tareas disponibles, o crea las tuyas</font></font></a></li>
+      <li class="hs-menu-item hs-menu-depth-3"><a href="https://codility.com/assess/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aprende más</font></font></a></li>
+     </ul></li>
+    <li class="hs-menu-item hs-menu-depth-2 hs-item-has-children"><a href="javascript:;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Entrevista</font></font></a>
+     <ul class="hs-menu-children-wrapper">
+      <li class="hs-menu-item hs-menu-depth-3"><a href="javascript:;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Conéctese con los candidatos y vea el código donde quiera que esté</font></font></a></li>
+      <li class="hs-menu-item hs-menu-depth-3"><a href="https://codility.com/interview/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aprende más</font></font></a></li>
+     </ul></li>
+   </div></ul></li>
+  <li class="hs-menu-item hs-menu-depth-1"><a href="https://codility.com/pricing/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Precios</font></font></a></li>
+  <li class="hs-menu-item hs-menu-depth-1"><a href="https://blog.codility.com/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Blog</font></font></a></li>
+  <li class="hs-menu-item hs-menu-depth-1"><a href="https://codility.com/login/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Iniciar sesión</font></font></a></li>
+  <li class="hs-menu-item hs-menu-depth-1"><a href="https://codility.com/trial/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Empiza la prueba gratuita</font></font></a></li>
+ </ul>
+</div></span></div><!--end layout-widget-wrapper -->
+</div><a class="mobile-icon"><span></span></a><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell page-center custom-mobile-menu" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-5 ">
+<div class="row-fluid ">
+<div class="span4 widget-span widget-type-raw_html custom-logo" style="" data-widget-type="raw_html" data-x="0" data-w="4">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_14752266464176384" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html"><a href="https://codility.com/">
+<i class="icon custom-codility_logo" title="Codility"></i>
+</a></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+<div class="span8 widget-span widget-type-menu custom-menu-primary " style="" data-widget-type="menu" data-x="4" data-w="8">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_147522629145024587" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_module_147522629145024587" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="Codility-Sep2016-Mobile Sitemap">
+ <a class="close-icon"><span></span></a><ul>
+  <li class="hs-menu-item hs-menu-depth-1"><a href="https://codility.com/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Casa</font></font></a></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children"><a href="javascript:;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Soluciones:</font></font></a>
+   <ul class="hs-menu-children-wrapper"><div class="menu-inner-div">
+    <li class="hs-menu-item hs-menu-depth-2"><a href="https://codility.com/sourcing/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fuente</font></font></a></li>
+    <li class="hs-menu-item hs-menu-depth-2"><a href="https://codility.com/assess/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Evaluar</font></font></a></li>
+    <li class="hs-menu-item hs-menu-depth-2"><a href="https://codility.com/interview/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Entrevista</font></font></a></li>
+   </div></ul></li>
+  <li class="hs-menu-item hs-menu-depth-1"><a href="https://codility.com/pricing/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Precios</font></font></a></li>
+  <li class="hs-menu-item hs-menu-depth-1"><a href="https://codility.com/login/">Login</a></li>
+  <li class="hs-menu-item hs-menu-depth-1"><a href="https://codility.com/trial/">Start Free Trial</a></li>
+ </ul>
+</div></span></div><!--end layout-widget-wrapper -->
+</div><a class="mobile-icon"><span></span></a><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-6 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-rich_text custom-menu-overlay" style="" data-widget-type="rich_text" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_147522684068610278" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+</div><!-- end coded_template: id:4383572124 path:generated_global_groups/4383572119.html -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div id="hero-section" class="span12 widget-span widget-type-cell custom-section-header" style="background-image: url(&quot;https://blog.codility.com/hs-fs/hubfs/Blog/Page%20Defaults/The%20Codility%20Blog.jpg?width=640&amp;name=The%20Codility%20Blog.jpg&quot;);" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-linked_image hero-section" style="display:none;" data-widget-type="linked_image" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_14713545132797030" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><a href="https://blog.codility.com/" id="hs-link-module_14713545132797030" style="border-width:0px;border:0px;"><img src="./Soluciones para nuestra tarea Equi_files/The Codility Blog.jpg" class="hs-image-widget " style="width:640px;border-width:0px;border:0px;" width="640" alt="The Codility Blog.jpg" title="The Codility Blog.jpg" srcset="https://blog.codility.com/hs-fs/hubfs/Blog/Page%20Defaults/The%20Codility%20Blog.jpg?width=320&amp;name=The%20Codility%20Blog.jpg 320w, https://blog.codility.com/hs-fs/hubfs/Blog/Page%20Defaults/The%20Codility%20Blog.jpg?width=640&amp;name=The%20Codility%20Blog.jpg 640w, https://blog.codility.com/hs-fs/hubfs/Blog/Page%20Defaults/The%20Codility%20Blog.jpg?width=960&amp;name=The%20Codility%20Blog.jpg 960w, https://blog.codility.com/hs-fs/hubfs/Blog/Page%20Defaults/The%20Codility%20Blog.jpg?width=1280&amp;name=The%20Codility%20Blog.jpg 1280w, https://blog.codility.com/hs-fs/hubfs/Blog/Page%20Defaults/The%20Codility%20Blog.jpg?width=1600&amp;name=The%20Codility%20Blog.jpg 1600w, https://blog.codility.com/hs-fs/hubfs/Blog/Page%20Defaults/The%20Codility%20Blog.jpg?width=1920&amp;name=The%20Codility%20Blog.jpg 1920w" sizes="(max-width: 640px) 100vw, 640px"></a></span></div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell wrapper" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-5 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-rich_text " style="" data-widget-type="rich_text" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_14713544878656186" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h1><span style="color: #ffffff;"><a href="https://blog.codility.com/" style="color: #ffffff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Construir mejor &lt;Dev_Teams /&gt;</font></font></a></span></h1>
+<p><span style="color: #ffffff;"><a href="https://blog.codility.com/" style="color: #ffffff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Información útil para reclutadores, ingenieros y aficionados a la programación</font></font></a></span></p></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-6 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_html " style="display:none;" data-widget-type="raw_html" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_14713545831968226" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html"></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end header -->
+</div><div class="body-container-wrapper">
+    <div class="body-container container-fluid">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_html topic-tab post-topics hide-for-post hide-for-author" style="" data-widget-type="raw_html" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_146046113236916249" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html"><ul><li><a href="https://blog.codility.com/">Show All</a></li>
+<li>
+<a class="topics-tab-link" href="https://blog.codility.com/topic/tech-recruiting">Tech Recruiting</a>
+</li>
+<li>
+<a class="topics-tab-link" href="https://blog.codility.com/topic/product-updates">Product Updates</a>
+</li>
+<li>
+<a class="topics-tab-link" href="https://blog.codility.com/topic/developer-insights">Developer Insights</a>
+</li>
+<li>
+<a class="topics-tab-link" href="https://blog.codility.com/topic/inside-codility">Inside Codility</a>
+</li>
+<li>
+<a class="topics-tab-link" href="https://blog.codility.com/topic/programming">Programming</a>
+</li>
+<li>
+<a class="topics-tab-link" href="https://blog.codility.com/topic/success-stories">Success Stories</a>
+</li>
+</ul>
+
+</span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell latest-stories hide-for-post hide-for-author" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell wrapper" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 ">
+<div class="row-fluid ">
+<div class="span8 widget-span widget-type-header " style="" data-widget-type="header" data-x="0" data-w="8">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_146046082658610510" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_header" style="" data-hs-cos-general-type="widget" data-hs-cos-type="header"><h2>Latest Posts</h2></span></div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+<div class="span4 widget-span widget-type-google_search src-box" style="" data-widget-type="google_search" data-x="8" data-w="4">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_14605449948072455" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_google_search" style="" data-hs-cos-general-type="widget" data-hs-cos-type="google_search">        <div id="hs-search-module" class="hs-search-module 8f2f9c2f-c448-4085-8ab6-9929e81a042b">
+            <form class="hs-form">
+                <div class="field" role="search">
+                    <label for="hs-search-8f2f9c2f-c448-4085-8ab6-9929e81a042b">Search this site on Google</label>
+                    <div class="input">
+                        <input type="text" id="hs-search-8f2f9c2f-c448-4085-8ab6-9929e81a042b" class="hs-input" value="" placeholder="Search Blog">
+                        <a class="hs-button primary">S</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+
+</span></div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-5 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_html topic-latest-story default-latest-story" style="display: none;" data-widget-type="raw_html" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_14603923085853002" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html"><div class="featured-posts">
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/how_you_should_prepare_for_gdpr.jpg&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/the-gdpr-pocalypse-is-almost-here-how-you-should-prepare">The GDPR-pocalypse is Almost Here: How You Should Prepare</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/tech-recruiting">Tech Recruiting</a>
+<a class="topic-link" href="https://blog.codility.com/topic/inside-codility">Inside Codility</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/the-gdpr-pocalypse-is-almost-here-how-you-should-prepare"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/code_highlighting_and_bundle_optimizations.jpg&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/code-highlighting-and-bundle-optimizations">Code Highlighting and Bundle Optimizations</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/developer-insights">Developer Insights</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/code-highlighting-and-bundle-optimizations"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/candidate-labs.jpg&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/candidate-labs-a-user-experience-researchers-magic-bullet">Candidate Labs: A User Experience Researcher’s Magic Bullet</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/inside-codility">Inside Codility</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/candidate-labs-a-user-experience-researchers-magic-bullet"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/keeping-canddiates-at-the-heart-of-recruitng.jpg&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/keeping-the-candidate-at-the-heart-of-recruiting">Part II Better Tech Recruiting: Keeping the Candidate at the Heart of Your...</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/tech-recruiting">Tech Recruiting</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/keeping-the-candidate-at-the-heart-of-recruiting"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+</div></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-6 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_html topic-latest-story tech-recruiting-story" style="display: none;" data-widget-type="raw_html" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_148114269004012853" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html"><div class="featured-posts">
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/how_you_should_prepare_for_gdpr.jpg&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/the-gdpr-pocalypse-is-almost-here-how-you-should-prepare">The GDPR-pocalypse is Almost Here: How You Should Prepare</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/tech-recruiting">Tech Recruiting</a>
+<a class="topic-link" href="https://blog.codility.com/topic/inside-codility">Inside Codility</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/the-gdpr-pocalypse-is-almost-here-how-you-should-prepare"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/keeping-canddiates-at-the-heart-of-recruitng.jpg&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/keeping-the-candidate-at-the-heart-of-recruiting">Part II Better Tech Recruiting: Keeping the Candidate at the Heart of Your...</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/tech-recruiting">Tech Recruiting</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/keeping-the-candidate-at-the-heart-of-recruiting"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/anatomy-of-great-tech-hiring.jpg&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/anatomy-of-great-tech-hiring">Part I Better Tech Recruiting: The Anatomy of Great Hiring</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/tech-recruiting">Tech Recruiting</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/anatomy-of-great-tech-hiring"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/Blog/Post%20Photos/sponsored-challenges-to-source-more-devs.jpg&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/codility-sponsored-challenges-your-weapon-x-sourcing-strategy">Codility Sponsored Challenges: Your Weapon X Sourcing Strategy</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/tech-recruiting">Tech Recruiting</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/codility-sponsored-challenges-your-weapon-x-sourcing-strategy"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+</div></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-7 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_html topic-latest-story product-updates-story" style="display: none;" data-widget-type="raw_html" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_148114329335418307" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html"><div class="featured-posts">
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/Blog/Post%20Photos/Rudolph-%20Codility-Card-2017.jpg&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/deck-the-halls-with-new-product-features">Deck the Halls with New Product Features</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/product-updates">Product Updates</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/deck-the-halls-with-new-product-features"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/Blog/Post%20Photos/win-over-sr-developers-with-codelive.jpg&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/how-to-win-over-senior-developers-with-your-recruiting-process">How to Win Over Senior Developers With Your Recruiting Process</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/product-updates">Product Updates</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/how-to-win-over-senior-developers-with-your-recruiting-process"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/Blog/Post%20Photos/highlight-frontend-talent-through-angular-tasks.jpg&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/highlight-front-end-talent-through-real-life-measures">Highlight Front-end Talent Through Real-Life Measures</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/product-updates">Product Updates</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/highlight-front-end-talent-through-real-life-measures"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/Blog/Post%20Photos/codility-training-suite.jpg&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/codility-training-suite-elevate-your-tech-team">Codility Training Suite: Elevate Your Tech Team</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/product-updates">Product Updates</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/codility-training-suite-elevate-your-tech-team"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+</div></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-8 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_html topic-latest-story developer-insights-story" style="display: none;" data-widget-type="raw_html" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_148114336523820525" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html"><div class="featured-posts">
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/code_highlighting_and_bundle_optimizations.jpg&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/code-highlighting-and-bundle-optimizations">Code Highlighting and Bundle Optimizations</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/developer-insights">Developer Insights</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/code-highlighting-and-bundle-optimizations"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/tips-to-ace-your-next-tech-interview.jpg&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/tips-to-ace-your-next-technical-interview">Top Tips To Ace Your Next Technical Interview</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/developer-insights">Developer Insights</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/tips-to-ace-your-next-technical-interview"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/Blog/Post%20Photos/CTO%20Strategies%20to%20hire%2010x%20Developers%20-%20Blog.Codility.com.jpg&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/cto-strategies-10x-devs">CTO Strategies for Hiring 10x Developers</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/tech-recruiting">Tech Recruiting</a>
+<a class="topic-link" href="https://blog.codility.com/topic/developer-insights">Developer Insights</a>
+<a class="topic-link" href="https://blog.codility.com/topic/success-stories">Success Stories</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/cto-strategies-10x-devs"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/Blog/Post%20Photos/Jacek%20Tomasiewicz%20at%20Codility.jpg&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/2014/04/why-binary-search-is-one-of-my-favorite.html">Why the Binary Search is one of my Favorite Algorithms</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/developer-insights">Developer Insights</a>
+<a class="topic-link" href="https://blog.codility.com/topic/inside-codility">Inside Codility</a>
+<a class="topic-link" href="https://blog.codility.com/topic/programming">Programming</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/2014/04/why-binary-search-is-one-of-my-favorite.html"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+</div></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-9 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_html topic-latest-story programming-story" style="display: none;" data-widget-type="raw_html" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_148114344849123167" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html"><div class="featured-posts">
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/Blog/Post%20Photos/Jacek%20Tomasiewicz%20at%20Codility.jpg&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/2014/04/why-binary-search-is-one-of-my-favorite.html">Why the Binary Search is one of my Favorite Algorithms</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/developer-insights">Developer Insights</a>
+<a class="topic-link" href="https://blog.codility.com/topic/inside-codility">Inside Codility</a>
+<a class="topic-link" href="https://blog.codility.com/topic/programming">Programming</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/2014/04/why-binary-search-is-one-of-my-favorite.html"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/Blog_Images/Challenges/Titanium_2016.png&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/titanium-is-one-of-our-hardest-challenges-in-2016">Titanium is One of our Hardest Challenges in 2016</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/programming">Programming</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/titanium-is-one-of-our-hardest-challenges-in-2016"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/Blog_Images/Challenges/Scandium_2016.png&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/2016/04/scandium-challenge-winner-thanks-to.html">Scandium Has a Winner</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/programming">Programming</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/2016/04/scandium-challenge-winner-thanks-to.html"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/Blog_Images/Challenges/Calcium_2016.png&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/2015/09/our-calcium-2015-challenge-winner.html">The Calcium Challenge &amp; Race to Glory</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/programming">Programming</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/2015/09/our-calcium-2015-challenge-winner.html"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+</div></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-10 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_html topic-latest-story inside-codility-story" style="display: none;" data-widget-type="raw_html" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_148114350760725298" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html"><div class="featured-posts">
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/how_you_should_prepare_for_gdpr.jpg&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/the-gdpr-pocalypse-is-almost-here-how-you-should-prepare">The GDPR-pocalypse is Almost Here: How You Should Prepare</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/tech-recruiting">Tech Recruiting</a>
+<a class="topic-link" href="https://blog.codility.com/topic/inside-codility">Inside Codility</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/the-gdpr-pocalypse-is-almost-here-how-you-should-prepare"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/candidate-labs.jpg&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/candidate-labs-a-user-experience-researchers-magic-bullet">Candidate Labs: A User Experience Researcher’s Magic Bullet</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/inside-codility">Inside Codility</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/candidate-labs-a-user-experience-researchers-magic-bullet"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/Blog/Post%20Photos/andrew-great-companies-start-with-great-culture.jpg&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/great-companies-start-with-great-culture">Great Companies Start With Great Culture</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/inside-codility">Inside Codility</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/great-companies-start-with-great-culture"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+<div class="item">
+<div class="post-image" style="background:#333333 url(&#39;https://blog.codility.com/hubfs/Blog/Post%20Photos/Jacek%20Tomasiewicz%20at%20Codility.jpg&#39;)no-repeat;">
+<div class="item-wrapper">
+<div class="title-wrap">
+<div class="post-title"><h2><a href="https://blog.codility.com/2014/04/why-binary-search-is-one-of-my-favorite.html">Why the Binary Search is one of my Favorite Algorithms</a></h2></div>
+<div class="post-recents-topic">
+<a class="topic-link" href="https://blog.codility.com/topic/developer-insights">Developer Insights</a>
+<a class="topic-link" href="https://blog.codility.com/topic/inside-codility">Inside Codility</a>
+<a class="topic-link" href="https://blog.codility.com/topic/programming">Programming</a>
+</div>
+</div>     
+</div>
+<div class="read-more-link">
+<a href="https://blog.codility.com/2014/04/why-binary-search-is-one-of-my-favorite.html"><i class="fa fa-link" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+</div></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-11 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell author-section" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-12 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_html " style="" data-widget-type="raw_html" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_146054723869316659" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html"></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-13 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell wrapper make-equal-height" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-14 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-global_widget " style="" data-widget-type="global_widget" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_mbspacer" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html" data-global-widget-id="4499895437">
+    <div class="cod-spacer"></div>
+</span></div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-15 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-global_widget " style="" data-widget-type="global_widget" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_mbspacer" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html" data-global-widget-id="4499895437">
+    <div class="cod-spacer"></div>
+</span></div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-16 ">
+<div class="row-fluid ">
+<div class="span9 widget-span widget-type-cell post-center" style="" data-widget-type="cell" data-x="0" data-w="9">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-17 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-header featured-stories hide-for-post hide-for-author" style="" data-widget-type="header" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_146046156677822490" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_header" style="" data-hs-cos-general-type="widget" data-hs-cos-type="header"><h2></h2></span></div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-18 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-blog_content " style="" data-widget-type="blog_content" data-x="0" data-w="12">
+<div class="blog-section">
+    <div class="blog-post-wrapper cell-wrapper">
+        <div class="section post-header">
+            
+            
+            
+            <!-- TITLE -->
+            <h2>
+                <a href="https://blog.codility.com/2011/03/solutions-for-task-equi.html" id="hubspot-name" class="link hubspot-editable" data-hubspot-form-id="name" data-hubspot-name="Blog Title"><span id="hs_cos_wrapper_name" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Soluciones para nuestra tarea Equi</font></font></span></a>
+            </h2>
+            <!-- Subtopics -->
+            <div class="topic-listing">
+                
+                    <span id="hubspot-topic_data">
+                    <i class="fa fa-tags"></i>&nbsp;
+                        
+                             <a class="post-topic-link" href="https://blog.codility.com/topic/programming"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Programación</font></font></a>
+                        
+                    </span>
+                
+            </div>
+            
+            
+            <div id="hubspot-author_data" class="hubspot-editable" data-hubspot-form-id="author_data" data-hubspot-name="Blog Author">
+                   
+                
+                
+                    
+                        <div class="hs-author-avatar">
+                            <a class="author-link-post" href="https://blog.codility.com/author/tomasz-wale%C5%84">
+                                <img src="./Soluciones para nuestra tarea Equi_files/Screen Shot 2016-10-28 at 10.15.30 AM.png" alt="Tomasz Waleń">
+                            </a>
+                        </div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                    
+                    Por
+                    </font></font><div>
+                        <a class="author-link-post" href="https://blog.codility.com/author/tomasz-wale%C5%84"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tomasz Waleń</font></font></a>
+                    </div>
+                
+                
+                <!-- POST DATE -->    
+                <div class="post-body-date"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                    25 de marzo de 2011
+                </font></font></div>
+                <!-- SOCIAL -->
+                <div class="social-shares-post">
+                       <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog.codility.com%2F2011%2F03%2Fsolutions-for-task-equi.html"><i class="fa fa-facebook"></i></a>
+                       <a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://blog.codility.com/2011/03/solutions-for-task-equi.html"><i class="fa fa-linkedin"></i></a>
+                       <a target="_blank" href="https://www.twitter.com/share?url=https%3A%2F%2Fblog.codility.com%2F2011%2F03%2Fsolutions-for-task-equi.html"><i class="fa fa-twitter"></i></a>
+                       <a target="_blank" href="https://plus.google.com/share?url=https%3A%2F%2Fblog.codility.com%2F2011%2F03%2Fsolutions-for-task-equi.html"><i class="fa fa-google-plus"></i></a>
+                </div>    
+            </div>
+            
+            
+            
+        </div>    
+    <div class="section post-body">
+        <span id="hs_cos_wrapper_post_body" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="rich_text"><div>
+<p style="text-align: left;"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Para los programadores que practican sus habilidades de codificación, o que se preparan para tomar una evaluación de Codility, ofrecemos una serie de lecciones gratuitas, desafíos y problemas de demostración en </font></font><a href="http://codility.com/programmers" target="_blank"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">el hogar de</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> nuestros </font><a href="http://codility.com/programmers" target="_blank"><font style="vertical-align: inherit;">programadores</font></a><font style="vertical-align: inherit;"> .&nbsp;</font></font></strong></p>
+<p style="text-align: left;"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">¡Una de las tareas más populares es Equi y hasta la fecha hemos evaluado más de 50,000 soluciones a este problema!</font></font></strong></p>
+</div>
+<div style="text-align: left;">
+<p><!--more--></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">El lenguaje más popular utilizado para resolver este problema es Java, aunque C #, PHP y C ++ también son muy populares:&nbsp;</font></font></p>
+</div>
+<div data-blogger-escaped-style="margin:20px" style="text-align: left;"><img src="./Soluciones para nuestra tarea Equi_files/Screen Shot 2016-11-17 at 9.05.22 AM.png" alt="Codility Equi Tarea idiomas comunes" width="454" style="width: 454px; display: block; margin-left: auto; margin-right: auto;" title="Codility Equi Tarea idiomas comunes" caption="false" data-constrained="true" srcset="https://blog.codility.com/hs-fs/hubfs/Blog_Images/Challenges/Screen%20Shot%202016-11-17%20at%209.05.22%20AM.png?width=227&amp;name=Screen%20Shot%202016-11-17%20at%209.05.22%20AM.png 227w, https://blog.codility.com/hs-fs/hubfs/Blog_Images/Challenges/Screen%20Shot%202016-11-17%20at%209.05.22%20AM.png?width=454&amp;name=Screen%20Shot%202016-11-17%20at%209.05.22%20AM.png 454w, https://blog.codility.com/hs-fs/hubfs/Blog_Images/Challenges/Screen%20Shot%202016-11-17%20at%209.05.22%20AM.png?width=681&amp;name=Screen%20Shot%202016-11-17%20at%209.05.22%20AM.png 681w, https://blog.codility.com/hs-fs/hubfs/Blog_Images/Challenges/Screen%20Shot%202016-11-17%20at%209.05.22%20AM.png?width=908&amp;name=Screen%20Shot%202016-11-17%20at%209.05.22%20AM.png 908w, https://blog.codility.com/hs-fs/hubfs/Blog_Images/Challenges/Screen%20Shot%202016-11-17%20at%209.05.22%20AM.png?width=1135&amp;name=Screen%20Shot%202016-11-17%20at%209.05.22%20AM.png 1135w, https://blog.codility.com/hs-fs/hubfs/Blog_Images/Challenges/Screen%20Shot%202016-11-17%20at%209.05.22%20AM.png?width=1362&amp;name=Screen%20Shot%202016-11-17%20at%209.05.22%20AM.png 1362w" sizes="(max-width: 454px) 100vw, 454px"></div>
+<div style="text-align: left;">
+<p><span style="font-size: 18px;"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">La descripción del problema es muy corta:</font></font></strong></span></p>
+<p>&nbsp;</p>
+<blockquote>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">El índice de equilibrio de una secuencia es un índice tal que la suma de elementos en índices más bajos es igual a la suma de elementos en índices más altos. </font><font style="vertical-align: inherit;">Por ejemplo, en una secuencia A:</font></font></p>
+<div data-blogger-escaped-style="text-align:center;margin:10px">
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A [0] = - 7 A [1] = 1 A [2] = 5 A [3] = 2 A [4] = - 4 A [5] = 3 A [6] = 0</font></font></p>
+</div>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3 es un índice de equilibrio, porque:</font></font></p>
+<div data-blogger-escaped-style="text-align:center;margin:10px">
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A [0] + A [1] + A [2] = A [4] + A [5] + A [6]</font></font></p>
+</div>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6 es también un índice de equilibrio, porque:</font></font></p>
+<div data-blogger-escaped-style="text-align:center;margin:10px">
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A [0] + A [1] + A [2] + A [3] + A [4] + A [5] = 0</font></font></p>
+</div>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(La suma de cero elementos es cero) 7 no es un índice de equilibrio, porque no es un índice válido de la secuencia A. Si todavía tiene dudas, aquí hay una definición precisa: El número entero k es un índice de equilibrio de una secuencia A [0], A [1] .., A [n-1] si y solo si </font></font><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0 &lt;= k</font></font></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> y </font></font><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">suma (A [0 .. (k-1)]) = suma (A [(k + 1) .. (n-1)])</font></font></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> . </font><font style="vertical-align: inherit;">Suponga que la suma de cero elementos es igual a cero.</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Escribe una función</font></font></p>
+<pre data-blogger-escaped-style="margin:10px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">int equi (int A [], int n)
+</font></font></pre>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">que, dada una secuencia, devuelve su índice de equilibrio (cualquiera) o -1 si no existe un índice de equilibrio. </font><font style="vertical-align: inherit;">Supongamos que la secuencia puede ser muy larga.</font></font></p>
+</blockquote>
+</div>
+<div>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">El problema se puede resolver usando varios enfoques, el más común es simplemente seguir la definición de equilibrio:</font></font></strong></p>
+<pre data-blogger-escaped-style="margin-left:30px"><span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">int</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> equi ( </font></font><span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">int</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> A [], </font></font><span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">int</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> n) {
+     </font></font><span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">int</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> k, m, lsum, rsum; 
+    </font></font><span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">para</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> (k = </font></font><span color="#800000" data-blogger-escaped-style=" color: Maroon;" style="color: #800000;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ; k &lt;n; ++ k) {</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        lsum = </font></font><span color="#800000" data-blogger-escaped-style=" color: Maroon;" style="color: #800000;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ; </font><font style="vertical-align: inherit;">rsum = </font></font><span color="#800000" data-blogger-escaped-style=" color: Maroon;" style="color: #800000;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ;
+        </font></font><span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">para</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> (m = </font></font><span color="#800000" data-blogger-escaped-style=" color: Maroon;" style="color: #800000;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ; m &lt;k; ++ m) lsum + = A [m]; 
+        </font></font><span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">para</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> (m = k + </font></font><span color="#800000" data-blogger-escaped-style=" color: Maroon;" style="color: #800000;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ; m &lt;n; ++ m) rsum + = A [m];  
+        </font></font><span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">if</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> (lsum == rsum) </font></font><span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">return</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> k;</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+    } </font></font><font></font>
+    <span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">return</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - </font></font><span color="#800000" data-blogger-escaped-style=" color: Maroon;" style="color: #800000;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ;</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+} </font></font><font></font>
+</pre>
+<p style="text-align: left;"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Desafortunadamente, este enfoque tiene dos desventajas:</font></font></strong></p>
+<ul style="text-align: left;">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">falla en grandes conjuntos de datos de entrada, ya que la complejidad del tiempo es </font></font><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">O (n </font></font><sup><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></sup><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> )</font></font></i></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">falla en valores de entrada grandes (por ejemplo, si la matriz de entrada contiene valores como MIN / MAX_INT) debido a los desbordamientos aritméticos</font></font></li>
+</ul>
+<p style="text-align: left;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">El análisis de la solución detectará tales problemas en el código enviado:</font></font></p>
+<p style="text-align: left;"><a data-blogger-escaped-onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://2.bp.blogspot.com/-WDjJJe0jmPk/TYtNqBYsPuI/AAAAAAAAEXU/I5zXmp4hB9g/s1600/equi-n2-analysis.png"><img alt="Análisis de solución de tareas de Codility Equi" border="0" data-blogger-escaped-style="display:block; margin:0px auto 10px; text-align:center;cursor:pointer; cursor:hand;width: 219px; height: 400px;" id="BLOGGER_PHOTO_ID_5587645147005075170" src="./Soluciones para nuestra tarea Equi_files/equi-n2-analysis.png" style="display: block; margin-left: auto; margin-right: auto; width: 219px;" title="Análisis de solución de tareas de Codility Equi" width="219" caption="false" data-constrained="true"></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Podemos solucionar el primer problema con un mejor algoritmo y el segundo problema con un mejor tipo de datos (por ejemplo, usar el tipo largo y largo en lugar de int para los cálculos de suma). </font><font style="vertical-align: inherit;">La observación clave para un mejor tiempo de ejecución es actualizar las sumas izquierda / derecha en tiempo constante en lugar de volver a calcularlas desde cero.</font></font></p>
+<pre data-blogger-escaped-style="margin-left:30px"><span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;">int</span> equi(<span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;">int</span> arr[], <span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;">int</span> n) {
+    <span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;">if</span> (n==<span color="#800000" data-blogger-escaped-style=" color: Maroon;" style="color: #800000;">0</span>) <span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;">return</span> -<span color="#800000" data-blogger-escaped-style=" color: Maroon;" style="color: #800000;">1</span>; 
+    <span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;">long</span> <span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;">long</span> sum = <span color="#800000" data-blogger-escaped-style=" color: Maroon;" style="color: #800000;">0</span>;
+    <span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;">int</span> i; 
+    <span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;">for</span>(i=<span color="#800000" data-blogger-escaped-style=" color: Maroon;" style="color: #800000;">0</span>;i&lt;n;i++) sum+=(<span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;">long</span> <span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;">long</span>) arr[i]; <font></font>
+<font></font>
+    <span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;">long</span> <span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;">long</span> sum_left = <span color="#800000" data-blogger-escaped-style=" color: Maroon;" style="color: #800000;">0</span>;    
+    <span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;">for</span>(i=<span color="#800000" data-blogger-escaped-style=" color: Maroon;" style="color: #800000;">0</span>;i&lt;n;i++) {
+        <span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;">long</span> <span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;">long</span> sum_right = sum - sum_left - (<span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;">long</span> <span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;">long</span>) arr[i];
+        <span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;">if</span> (sum_left == sum_right) <span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;">return</span> i;<font></font>
+        sum_left += (<span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;">long</span> <span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;">long</span>) arr[i];<font></font>
+    } <font></font>
+    <span color="#0000ff" data-blogger-escaped-style=" color: Blue;" style="color: #0000ff;">return</span> -<span color="#800000" data-blogger-escaped-style=" color: Maroon;" style="color: #800000;">1</span>; <font></font>
+} <font></font>
+</pre>
+<p style="text-align: left;"><strong>Using this solution, you can obtain a perfect score:</strong></p>
+<p style="text-align: left;"><a data-blogger-escaped-onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://1.bp.blogspot.com/-aurgu30cezk/TYtP-8IEl_I/AAAAAAAAEXc/2VgowR675iY/s1600/equi-n-analysis.png"><img alt="Análisis de la solución Codility Equi - puntaje perfecto!" border="0" data-blogger-escaped-style="display:block; margin:0px auto 10px; text-align:center;cursor:pointer; cursor:hand;width: 259px; height: 400px;" id="BLOGGER_PHOTO_ID_5587647705393698802" src="./Soluciones para nuestra tarea Equi_files/equi-n-analysis.png" style="display: block; margin-left: auto; margin-right: auto; width: 259px;" title="Análisis de la solución Codility Equi - puntaje perfecto!" width="259" caption="false" data-constrained="true"></a></p>
+<p style="text-align: left;"><strong><span style="font-size: 24px;">What's next?</span></strong></p>
+<p style="text-align: left;">We have a live competition to <a href="https://app.codility.com/demo/take-sample-test/equi/">write the shortest Equi solution</a> - 54 bytes is smallest solution to date! If you're preparing for a Codility assessment, we offer two other demo problems which are free to take and can help you warm up:&nbsp;</p>
+<ol>
+<li><a href="http://codility.com/demo/take-sample-test/ps/">PrefixSet</a></li>
+<li><a href="http://codility.com/demo/take-sample-test/ndi/">Number of Disc Intersections</a></li>
+</ol>
+<p>&nbsp;Happy coding and good luck!&nbsp;</p>
+<p>&nbsp;</p>
+<p style="text-align: left;"><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-d40a5ac3-d9e7-4d15-8a28-417dad10547c"><span class="hs-cta-node hs-cta-d40a5ac3-d9e7-4d15-8a28-417dad10547c" id="hs-cta-d40a5ac3-d9e7-4d15-8a28-417dad10547c" style="visibility: visible; display: block; text-align: center;" data-hs-drop="true"><a id="cta_button_2502692_1f040683-6f1b-4cee-95cf-71c375ffb45b" class="cta_button " href="https://cta-service-cms2.hubspot.com/ctas/v2/public/cs/c/?cta_guid=1f040683-6f1b-4cee-95cf-71c375ffb45b&amp;placement_guid=d40a5ac3-d9e7-4d15-8a28-417dad10547c&amp;portal_id=2502692&amp;redirect_url=APefjpFbv0gJ0VmPHtZliNNXoVvOR2qJoSX0ZD3JLL750EAW8g853qy9HBMwFI1dqRjx3-g6CluKK7k6gB4YjsSra5dp4qToU9KWhhuAZGehwCAOSjqDPuDmHLOgw24oGTGBPbXzWejQnOrNde_Mfx9X48U9FxZS4SvgIYxhK8XRCC-DK0AeNnrlYa5buzqlLkxRNN_t-_tTEjtSUicSYyN-WdDDsyA7maNfSBncrVUBKc5rR3qN9I0&amp;hsutk=5a26f653d426b6c5e0d16328936f0066&amp;canon=https%3A%2F%2Fblog.codility.com%2F2011%2F03%2Fsolutions-for-task-equi.html&amp;click=dab61fc0-410e-4fa7-8fa8-2957f4b22d5b&amp;utm_referrer=https%3A%2F%2Fwww.google.com.co%2F&amp;pageId=4630875780&amp;__hstc=145948907.5a26f653d426b6c5e0d16328936f0066.1520882523071.1520882523071.1520889344652.2&amp;__hssc=145948907.1.1520889344652&amp;__hsfp=3239846679" target="_blank" style="margin: 20px auto;" cta_dest_link="https://codility.com/programmers/" title="Únase a nuestro sitio gratuito para programadores"><span style="font-size: 14px; font-family: arial, helvetica, sans-serif;">Join our free Programmers' Home</span></a></span></span><!-- end HubSpot Call-to-Action Code --></p>
+</div></span>
+    </div>
+    
+    </div>
+</div></div>
+
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-19 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-blog_comments " style="" data-widget-type="blog_comments" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_1499292410615129" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_blog_comments" style="" data-hs-cos-general-type="widget" data-hs-cos-type="blog_comments">
+<div class="section post-footer">
+    <div id="comments-listing" class="new-comments">
+    
+    
+    <div id="c0001.0000.0000.0000.0000.0000.0000.0000.0000.0000" class="comment depth-0" data-threadid="0001.0000.0000.0000.0000.0000.0000.0000.0000.0000">
+        <div class="comment-from">
+          <h4>
+            
+            Itumeleng Ntshoe
+            
+          </h4>
+        </div>
+        <div class="comment-date">8/2/2017, 5:37:17 AM</div>
+        <div class="comment-body"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hola, 
+ </font></font><br>
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">me gustaría unirme al grupo para mejorar mis habilidades para resolver problemas y aprender a resolver problemas más complejos usando diferentes algoritmos. 
+</font></font><br>
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Saludos
+ </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Itumeleng</font></font></p></div>
+        
+          <button class="comment-reply-to hs-button secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Respuesta a </font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Itumeleng Ntshoe</font></font></em></button>
+        
+      </div>
+
+    <div id="c0001.0001.0000.0000.0000.0000.0000.0000.0000.0000" class="comment depth-1" data-threadid="0001.0001.0000.0000.0000.0000.0000.0000.0000.0000">
+        <div class="comment-from">
+          <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+            
+            Jeffrey Swartwout
+            
+          </font></font></h4>
+        </div>
+        <div class="comment-date"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">8/2/2017, 11:06:01 AM</font></font></div>
+        <div class="comment-body"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hola, Itumeleng, ¡ </font></font><br>
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">solo </font><font style="vertical-align: inherit;">tienes que
+ </font><font style="vertical-align: inherit;">hacer clic en "Únete a nuestra página de inicio gratuita de programadores" para unirte! </font><font style="vertical-align: inherit;">¡Buena suerte para perfeccionar tus habilidades para resolver problemas!
+</font></font><br>
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mejor,
+ </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jeff</font></font></p></div>
+        
+          <button class="comment-reply-to hs-button secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Respuesta a </font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jeffrey Swartwout</font></font></em></button>
+        
+      </div>
+
+</div><div id="hs-comment-embed" style="display:none;">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+</div>
+<div id="comment-form" class="new-comments"><form novalidate="" accept-charset="UTF-8" action="https://api.hubapi.com/comments/v3/comment?portalId=2502692" enctype="multipart/form-data" id="hsForm_89a6c0c3-7362-4b15-b5cd-ae73593d215c" method="POST" class="hs-form stacked hs-form-private hs-form-89a6c0c3-7362-4b15-b5cd-ae73593d215c_2bd3affc-786c-4c6c-8ce9-fe50c780e0ae" data-form-id="89a6c0c3-7362-4b15-b5cd-ae73593d215c" data-portal-id="2502692" data-reactid=".hbspt-forms-1"><div class="hs_firstname hs-firstname hs-fieldtype-text field hs-form-field" data-reactid=".hbspt-forms-1.0:$0"><label id="label-firstname-89a6c0c3-7362-4b15-b5cd-ae73593d215c" class="" placeholder="Enter your First Name" for="firstname-89a6c0c3-7362-4b15-b5cd-ae73593d215c" data-reactid=".hbspt-forms-1.0:$0.0"><span data-reactid=".hbspt-forms-1.0:$0.0.0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nombre </font></font></span><span class="hs-form-required" data-reactid=".hbspt-forms-1.0:$0.0.1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></span></label><legend class="hs-field-desc" style="display:none;" data-reactid=".hbspt-forms-1.0:$0.1"></legend><div class="input" data-reactid=".hbspt-forms-1.0:$0.$firstname"><input id="firstname-89a6c0c3-7362-4b15-b5cd-ae73593d215c" class="hs-input" type="text" name="firstname" required="" value="" placeholder="" data-reactid=".hbspt-forms-1.0:$0.$firstname.0"></div></div><div class="hs_lastname hs-lastname hs-fieldtype-text field hs-form-field" data-reactid=".hbspt-forms-1.0:$1"><label id="label-lastname-89a6c0c3-7362-4b15-b5cd-ae73593d215c" class="" placeholder="Enter your Last Name" for="lastname-89a6c0c3-7362-4b15-b5cd-ae73593d215c" data-reactid=".hbspt-forms-1.0:$1.0"><span data-reactid=".hbspt-forms-1.0:$1.0.0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apellido</font></font></span></label><legend class="hs-field-desc" style="display:none;" data-reactid=".hbspt-forms-1.0:$1.1"></legend><div class="input" data-reactid=".hbspt-forms-1.0:$1.$lastname"><input id="lastname-89a6c0c3-7362-4b15-b5cd-ae73593d215c" class="hs-input" type="text" name="lastname" value="" placeholder="" data-reactid=".hbspt-forms-1.0:$1.$lastname.0"></div></div><div class="hs_email hs-email hs-fieldtype-text field hs-form-field" data-reactid=".hbspt-forms-1.0:$2"><label id="label-email-89a6c0c3-7362-4b15-b5cd-ae73593d215c" class="" placeholder="Enter your Email" for="email-89a6c0c3-7362-4b15-b5cd-ae73593d215c" data-reactid=".hbspt-forms-1.0:$2.0"><span data-reactid=".hbspt-forms-1.0:$2.0.0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Correo electrónico </font></font></span><span class="hs-form-required" data-reactid=".hbspt-forms-1.0:$2.0.1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></span></label><legend class="hs-field-desc" style="display:none;" data-reactid=".hbspt-forms-1.0:$2.1"></legend><div class="input" data-reactid=".hbspt-forms-1.0:$2.$email"><input id="email-89a6c0c3-7362-4b15-b5cd-ae73593d215c" class="hs-input" type="email" name="email" required="" placeholder="" value="" data-reactid=".hbspt-forms-1.0:$2.$email.0"></div></div><div class="hs_comment hs-comment hs-fieldtype-textarea field hs-form-field" data-reactid=".hbspt-forms-1.0:$3"><label id="label-comment-89a6c0c3-7362-4b15-b5cd-ae73593d215c" class="" placeholder="Enter your Comment" for="comment-89a6c0c3-7362-4b15-b5cd-ae73593d215c" data-reactid=".hbspt-forms-1.0:$3.0"><span data-reactid=".hbspt-forms-1.0:$3.0.0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Comentario </font></font></span><span class="hs-form-required" data-reactid=".hbspt-forms-1.0:$3.0.1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></span></label><legend class="hs-field-desc" style="display:none;" data-reactid=".hbspt-forms-1.0:$3.1"></legend><div class="input" data-reactid=".hbspt-forms-1.0:$3.$comment"><textarea id="comment-89a6c0c3-7362-4b15-b5cd-ae73593d215c" class="hs-input" name="comment" required="" placeholder="" data-reactid=".hbspt-forms-1.0:$3.$comment.0"></textarea></div></div><div class="hs_subscribe hs-subscribe hs-fieldtype-booleancheckbox field hs-form-field" data-reactid=".hbspt-forms-1.0:$4"><legend class="hs-field-desc" style="display:none;" data-reactid=".hbspt-forms-1.0:$4.1"></legend><div class="input" data-reactid=".hbspt-forms-1.0:$4.$subscribe"><ul class="inputs-list" data-reactid=".hbspt-forms-1.0:$4.$subscribe.0"><li class="hs-form-booleancheckbox" data-reactid=".hbspt-forms-1.0:$4.$subscribe.0.0"><label for="subscribe-89a6c0c3-7362-4b15-b5cd-ae73593d215c" class="hs-form-booleancheckbox-display" data-reactid=".hbspt-forms-1.0:$4.$subscribe.0.0.0"><input id="subscribe-89a6c0c3-7362-4b15-b5cd-ae73593d215c" class="hs-input" type="checkbox" name="subscribe" value="true" data-reactid=".hbspt-forms-1.0:$4.$subscribe.0.0.0.0"><span data-reactid=".hbspt-forms-1.0:$4.$subscribe.0.0.0.1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Suscribirse a los comentarios de seguimiento de esta publicación</font></font></span></label></li></ul></div></div><div class="hs_lifecyclestage hs-lifecyclestage hs-fieldtype-radio field hs-form-field" style="display:none;" data-reactid=".hbspt-forms-1.0:$5"><label id="label-lifecyclestage-89a6c0c3-7362-4b15-b5cd-ae73593d215c" class="" placeholder="Enter your Lifecycle Stage" for="lifecyclestage-89a6c0c3-7362-4b15-b5cd-ae73593d215c" data-reactid=".hbspt-forms-1.0:$5.0"><span data-reactid=".hbspt-forms-1.0:$5.0.0">Lifecycle Stage</span></label><legend class="hs-field-desc" style="display:none;" data-reactid=".hbspt-forms-1.0:$5.1"></legend><div class="input" data-reactid=".hbspt-forms-1.0:$5.$lifecyclestage"><input name="lifecyclestage" class="hs-input" type="hidden" value="subscriber" data-reactid=".hbspt-forms-1.0:$5.$lifecyclestage.0"></div></div><div class="hs_submit hs-submit" data-reactid=".hbspt-forms-1.3"><div class="hs-field-desc" style="display:none;" data-reactid=".hbspt-forms-1.3.0"></div><div class="actions" data-reactid=".hbspt-forms-1.3.1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input type="submit" value="enviar comentario" class="hs-button primary" data-reactid=".hbspt-forms-1.3.1.0"></font></font></div></div><input name="hs_context" type="hidden" value="{&quot;rumScriptExecuteTime&quot;:2496.2999999988824,&quot;rumServiceResponseTime&quot;:7323.599999999715,&quot;rumFormRenderTime&quot;:330.8999999972002,&quot;rumTotalRenderTime&quot;:7328.799999999319,&quot;rumTotalRequestTime&quot;:324.49999999880674,&quot;pageUrl&quot;:&quot;https://blog.codility.com/2011/03/solutions-for-task-equi.html&quot;,&quot;pageTitle&quot;:&quot;Solutions for our Equi Task&quot;,&quot;source&quot;:&quot;FormsNext-static-1.845&quot;,&quot;isHostedOnHubspot&quot;:true,&quot;timestamp&quot;:1520889344757,&quot;userAgent&quot;:&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36&quot;,&quot;referrer&quot;:&quot;https://www.google.com.co/&quot;,&quot;hutk&quot;:&quot;5a26f653d426b6c5e0d16328936f0066&quot;,&quot;originalEmbedContext&quot;:{&quot;portalId&quot;:&quot;2502692&quot;,&quot;formId&quot;:&quot;89a6c0c3-7362-4b15-b5cd-ae73593d215c&quot;,&quot;target&quot;:&quot;#comment-form&quot;,&quot;type&quot;:&quot;BLOG_COMMENT&quot;,&quot;submitButtonClass&quot;:&quot;hs-button primary&quot;,&quot;css&quot;:&quot;&quot;,&quot;redirectUrl&quot;:&quot;&quot;,&quot;inlineMessage&quot;:true},&quot;recentFieldsCookie&quot;:{},&quot;pageId&quot;:&quot;4630875780&quot;,&quot;boolCheckBoxFields&quot;:&quot;subscribe&quot;,&quot;dateFields&quot;:&quot;&quot;,&quot;redirectUrl&quot;:&quot;&quot;,&quot;smartFields&quot;:{},&quot;urlParams&quot;:{},&quot;formValidity&quot;:{},&quot;formTarget&quot;:&quot;#comment-form&quot;,&quot;correlationId&quot;:&quot;68432c1d-d054-4b6b-a872-ffc4536dcabe&quot;,&quot;disableCookieSubmission&quot;:false,&quot;usingInvisibleRecaptcha&quot;:false,&quot;isFallback&quot;:false}" data-reactid=".hbspt-forms-1.4"><input type="hidden" id="id_portalId" name="portalId" value="2502692"><input type="hidden" id="id_contentId" name="contentId" value="4630875780"><input type="hidden" id="id_collectionId" name="collectionId" value="4324893661"><input type="hidden" id="id_contentAuthorEmail" name="contentAuthorEmail" value="walen@codility.com"><input type="hidden" id="id_contentAuthorName" name="contentAuthorName" value="Tomasz Waleń"><input type="hidden" id="id_comment_verification_text" name="comment_verification_text" value="Thank you for commenting on the Codility blog!"><input type="hidden" id="id_contentTitle" name="contentTitle" value="Solutions for our Equi Task"><input type="hidden" id="id_contentPermalink" name="contentPermalink" value="https://blog.codility.com/2011/03/solutions-for-task-equi.html"><input type="hidden" id="id_contentCreatedAt" name="contentCreatedAt" value="1301068440000"><input type="hidden" id="id_formGuid" name="formGuid" value="89a6c0c3-7362-4b15-b5cd-ae73593d215c"></form></div><!-- end comment-form -->
+
+
+
+    
+</div>
+
+</span></div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-20 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-linked_image " style="display:none;" data-widget-type="linked_image" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_14713494184551461" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="./Soluciones para nuestra tarea Equi_files/placeholder_200x200.png" class="hs-image-widget " style="border-width:0px;border:0px;" alt="" title=""></span></div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-21 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell mob-padlr wrapper" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-22 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-global_widget " style="" data-widget-type="global_widget" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_mbspacer" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html" data-global-widget-id="4499895437">
+    <div class="cod-spacer"></div>
+</span></div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-23 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-global_widget " style="" data-widget-type="global_widget" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_postpagination" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html" data-global-widget-id="4499794297"><div class="post-pagination">
+<div class="prev-post">
+
+</div>
+
+
+<div class="next-post">
+
+<div class="nav-text"><a href="https://blog.codility.com/2015/08/four-programming-questions-to-ask.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Siguiente publicación</font></font></a>
+<h5><a href="https://blog.codility.com/2015/08/four-programming-questions-to-ask.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cuatro preguntas para hacer durante las entrevistas técnicas</font></font></a>
+</h5>
+</div>
+
+</div>
+
+
+
+</div></span></div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span3 widget-span widget-type-cell blog-sidebar hide-for-author" style="" data-widget-type="cell" data-x="9" data-w="3">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-24 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-blog_subscribe " style="" data-widget-type="blog_subscribe" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_blog_subscription" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_blog_subscribe" style="" data-hs-cos-general-type="widget" data-hs-cos-type="blog_subscribe"><h3 id="hs_cos_wrapper_blog_subscription_title" class="hs_cos_wrapper form-title" data-hs-cos-general-type="widget_field" data-hs-cos-type="text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Suscríbete al Blog</font></font></h3>
+
+<div id="hs_form_target_blog_subscription"><form novalidate="" accept-charset="UTF-8" action="https://forms.hsforms.com/submissions/v3/public/submit/formsnext/multipart/2502692/3ae05b02-d5b2-4b71-8179-284fc638c29d" enctype="multipart/form-data" id="hsForm_3ae05b02-d5b2-4b71-8179-284fc638c29d_2441" method="POST" class="hs-form stacked hs-form-private hs-form-3ae05b02-d5b2-4b71-8179-284fc638c29d_eb6036ac-a406-4cee-9543-624d6db80b87" data-form-id="3ae05b02-d5b2-4b71-8179-284fc638c29d" data-portal-id="2502692" target="target_iframe_3ae05b02-d5b2-4b71-8179-284fc638c29d_2441" data-reactid=".hbspt-forms-0"><div class="hs_email hs-email hs-fieldtype-text field hs-form-field" data-reactid=".hbspt-forms-0.0:$0"><label id="label-email-3ae05b02-d5b2-4b71-8179-284fc638c29d_2441" class="" placeholder="Enter your Email" for="email-3ae05b02-d5b2-4b71-8179-284fc638c29d_2441" data-reactid=".hbspt-forms-0.0:$0.0"><span data-reactid=".hbspt-forms-0.0:$0.0.0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Correo electrónico </font></font></span><span class="hs-form-required" data-reactid=".hbspt-forms-0.0:$0.0.1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></span></label><legend class="hs-field-desc" style="display:none;" data-reactid=".hbspt-forms-0.0:$0.1"></legend><div class="input" data-reactid=".hbspt-forms-0.0:$0.$email"><input id="email-3ae05b02-d5b2-4b71-8179-284fc638c29d_2441" class="hs-input" type="email" name="email" required="" placeholder="" value="" data-reactid=".hbspt-forms-0.0:$0.$email.0"></div></div><div class="hs_blog_default_hubspot_blog_subscription hs-blog_default_hubspot_blog_subscription hs-fieldtype-radio field hs-form-field" data-reactid=".hbspt-forms-0.0:$1"><label id="label-blog_default_hubspot_blog_subscription-3ae05b02-d5b2-4b71-8179-284fc638c29d_2441" class="" placeholder="Enter your Notification Frequency" for="blog_default_hubspot_blog_subscription-3ae05b02-d5b2-4b71-8179-284fc638c29d_2441" data-reactid=".hbspt-forms-0.0:$1.0"><span data-reactid=".hbspt-forms-0.0:$1.0.0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Frecuencia de notificación </font></font></span><span class="hs-form-required" data-reactid=".hbspt-forms-0.0:$1.0.1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">*</font></font></span></label><legend class="hs-field-desc" style="display:none;" data-reactid=".hbspt-forms-0.0:$1.1"></legend><div class="input" data-reactid=".hbspt-forms-0.0:$1.$blog_default_hubspot_blog_subscription"><ul class="inputs-list multi-container" required="" role="radiogroup" data-reactid=".hbspt-forms-0.0:$1.$blog_default_hubspot_blog_subscription.0"><li class="hs-form-radio" role="radio" data-reactid=".hbspt-forms-0.0:$1.$blog_default_hubspot_blog_subscription.0.$weekly"><label for="blog_default_hubspot_blog_subscription0-3ae05b02-d5b2-4b71-8179-284fc638c29d_2441" class="hs-form-radio-display" data-reactid=".hbspt-forms-0.0:$1.$blog_default_hubspot_blog_subscription.0.$weekly.0"><input id="blog_default_hubspot_blog_subscription0-3ae05b02-d5b2-4b71-8179-284fc638c29d_2441" class="hs-input" type="radio" name="blog_default_hubspot_blog_subscription" value="weekly" checked="" aria-labelledby="label-blog_default_hubspot_blog_subscription-3ae05b02-d5b2-4b71-8179-284fc638c29d_2441" data-reactid=".hbspt-forms-0.0:$1.$blog_default_hubspot_blog_subscription.0.$weekly.0.0"><span data-reactid=".hbspt-forms-0.0:$1.$blog_default_hubspot_blog_subscription.0.$weekly.0.1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Semanal</font></font></span></label></li><li class="hs-form-radio" role="radio" data-reactid=".hbspt-forms-0.0:$1.$blog_default_hubspot_blog_subscription.0.$monthly"><label for="blog_default_hubspot_blog_subscription1-3ae05b02-d5b2-4b71-8179-284fc638c29d_2441" class="hs-form-radio-display" data-reactid=".hbspt-forms-0.0:$1.$blog_default_hubspot_blog_subscription.0.$monthly.0"><input id="blog_default_hubspot_blog_subscription1-3ae05b02-d5b2-4b71-8179-284fc638c29d_2441" class="hs-input" type="radio" name="blog_default_hubspot_blog_subscription" value="monthly" aria-labelledby="label-blog_default_hubspot_blog_subscription-3ae05b02-d5b2-4b71-8179-284fc638c29d_2441" data-reactid=".hbspt-forms-0.0:$1.$blog_default_hubspot_blog_subscription.0.$monthly.0.0"><span data-reactid=".hbspt-forms-0.0:$1.$blog_default_hubspot_blog_subscription.0.$monthly.0.1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mensual</font></font></span></label></li></ul></div></div><div class="hs_lifecyclestage hs-lifecyclestage hs-fieldtype-radio field hs-form-field" style="display:none;" data-reactid=".hbspt-forms-0.0:$2"><label id="label-lifecyclestage-3ae05b02-d5b2-4b71-8179-284fc638c29d_2441" class="" placeholder="Enter your Lifecycle Stage" for="lifecyclestage-3ae05b02-d5b2-4b71-8179-284fc638c29d_2441" data-reactid=".hbspt-forms-0.0:$2.0"><span data-reactid=".hbspt-forms-0.0:$2.0.0">Lifecycle Stage</span></label><legend class="hs-field-desc" style="display:none;" data-reactid=".hbspt-forms-0.0:$2.1"></legend><div class="input" data-reactid=".hbspt-forms-0.0:$2.$lifecyclestage"><input name="lifecyclestage" class="hs-input" type="hidden" value="subscriber" data-reactid=".hbspt-forms-0.0:$2.$lifecyclestage.0"></div></div><div class="hs_submit hs-submit" data-reactid=".hbspt-forms-0.3"><div class="hs-field-desc" style="display:none;" data-reactid=".hbspt-forms-0.3.0"></div><div class="actions" data-reactid=".hbspt-forms-0.3.1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input type="submit" value="Regístrate" class="hs-button primary large" data-reactid=".hbspt-forms-0.3.1.0"></font></font></div></div><input name="hs_context" type="hidden" value="{&quot;rumScriptExecuteTime&quot;:2496.2999999988824,&quot;rumServiceResponseTime&quot;:3248.9999999997963,&quot;rumFormRenderTime&quot;:573.8000000019383,&quot;rumTotalRequestTime&quot;:570.1000000008207,&quot;pageUrl&quot;:&quot;https://blog.codility.com/2011/03/solutions-for-task-equi.html&quot;,&quot;pageTitle&quot;:&quot;Solutions for our Equi Task&quot;,&quot;source&quot;:&quot;FormsNext-static-1.845&quot;,&quot;isHostedOnHubspot&quot;:true,&quot;timestamp&quot;:1520889340782,&quot;userAgent&quot;:&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36&quot;,&quot;referrer&quot;:&quot;https://www.google.com.co/&quot;,&quot;hutk&quot;:&quot;5a26f653d426b6c5e0d16328936f0066&quot;,&quot;originalEmbedContext&quot;:{&quot;portalId&quot;:&quot;2502692&quot;,&quot;formId&quot;:&quot;3ae05b02-d5b2-4b71-8179-284fc638c29d&quot;,&quot;formInstanceId&quot;:&quot;2441&quot;,&quot;pageId&quot;:4630875780,&quot;pageName&quot;:&quot;Solutions for our Equi Task&quot;,&quot;contentType&quot;:&quot;blog-post&quot;,&quot;inlineMessage&quot;:true,&quot;css&quot;:&quot;&quot;,&quot;target&quot;:&quot;#hs_form_target_blog_subscription&quot;,&quot;formData&quot;:{&quot;cssClass&quot;:&quot;hs-form stacked&quot;}},&quot;recentFieldsCookie&quot;:{},&quot;pageId&quot;:&quot;4630875780&quot;,&quot;pageName&quot;:&quot;Solutions for our Equi Task&quot;,&quot;boolCheckBoxFields&quot;:&quot;&quot;,&quot;dateFields&quot;:&quot;&quot;,&quot;formInstanceId&quot;:&quot;2441&quot;,&quot;smartFields&quot;:{},&quot;urlParams&quot;:{},&quot;formValidity&quot;:{},&quot;formTarget&quot;:&quot;#hs_form_target_blog_subscription&quot;,&quot;correlationId&quot;:&quot;b4cd8cdc-6b7c-4fd4-adb6-78b1058a7afa&quot;,&quot;disableCookieSubmission&quot;:false,&quot;usingInvisibleRecaptcha&quot;:false,&quot;isFallback&quot;:false}" data-reactid=".hbspt-forms-0.4"><iframe name="target_iframe_3ae05b02-d5b2-4b71-8179-284fc638c29d_2441" style="display:none;" data-reactid=".hbspt-forms-0.5" src="./Soluciones para nuestra tarea Equi_files/saved_resource.html"></iframe></form></div>
+
+
+
+</span></div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-25 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-global_widget ver-pad30" style="" data-widget-type="global_widget" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_popular_posts" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html" data-global-widget-id="4426433514">
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Historias Populares</font></font></h3>
+
+<div class="pop-post-item">
+    <div class="span3 pop-post-image"><a href="https://blog.codility.com/2011/03/solutions-for-task-equi.html"><span style="background:#333333 url(https://blog.codility.com/hubfs/Blog_Images/photo-1429051883746-afd9d56fbdaf.jpeg)no-repeat;"></span></a></div>
+    <div class="span9 pop-post-title"><a href="https://blog.codility.com/2011/03/solutions-for-task-equi.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Soluciones para nuestra tarea de Equi </font></font></a>
+<span class="pop-post-date"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">25 de marzo de 2011</font></font></span>
+    </div>
+   
+
+</div>
+
+<div class="pop-post-item">
+    <div class="span3 pop-post-image"><a href="https://blog.codility.com/a-recruiters-guide-to-connecting-with-hiring-managers"><span style="background:#333333 url(https://blog.codility.com/hubfs/Blog/Post%20Photos/how-recruiters-can-connect-with-hiring-managers.jpg)no-repeat;"></span></a></div>
+    <div class="span9 pop-post-title"><a href="https://blog.codility.com/a-recruiters-guide-to-connecting-with-hiring-managers"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Una guía de reclutadores para conectarse con los gerentes de contratación </font></font></a>
+<span class="pop-post-date"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jul 19, 2017</font></font></span>
+    </div>
+   
+
+</div>
+
+<div class="pop-post-item">
+    <div class="span3 pop-post-image"><a href="https://blog.codility.com/using-online-coding-tests-to-hire-front-end-and-back-end-developers"><span style="background:#333333 url(https://blog.codility.com/hubfs/Blog/Post%20Photos/Front-end%20and%20Back-end,%20the%20Art%20of%20Hiring%20Developers.jpg)no-repeat;"></span></a></div>
+    <div class="span9 pop-post-title"><a href="https://blog.codility.com/using-online-coding-tests-to-hire-front-end-and-back-end-developers"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Front-end y Back-end: el arte de contratar desarrolladores </font></font></a>
+<span class="pop-post-date"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">21 de junio de 2017</font></font></span>
+    </div>
+   
+
+</div>
+
+<div class="pop-post-item">
+    <div class="span3 pop-post-image"><a href="https://blog.codility.com/programming-tests-great-candidate-experiences"><span style="background:#333333 url(//blog.codility.com/hubfs/Blog/Post%20Photos/Codility%204%20Million%20Assessments%20Candidate%20Insights.jpg)no-repeat;"></span></a></div>
+    <div class="span9 pop-post-title"><a href="https://blog.codility.com/programming-tests-great-candidate-experiences"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">¿Cómo pueden las pruebas de programación ayudar a crear grandes experiencias candidatas? </font></font></a>
+<span class="pop-post-date"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">17 de abril de 2017</font></font></span>
+    </div>
+   
+
+</div>
+
+<div class="pop-post-item">
+    <div class="span3 pop-post-image"><a href="https://blog.codility.com/cto-strategies-10x-devs"><span style="background:#333333 url(https://blog.codility.com/hubfs/Blog/Post%20Photos/CTO%20Strategies%20to%20hire%2010x%20Developers%20-%20Blog.Codility.com.jpg)no-repeat;"></span></a></div>
+    <div class="span9 pop-post-title"><a href="https://blog.codility.com/cto-strategies-10x-devs"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Estrategias de CTO para la contratación de desarrolladores 10x </font></font></a>
+<span class="pop-post-date"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">07 de diciembre de 2016</font></font></span>
+    </div>
+   
+
+</div>
+
+</span></div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-26 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-global_widget ver-pad30" style="" data-widget-type="global_widget" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_post_topics" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html" data-global-widget-id="4426433769"><h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Etiquetas Populares</font></font></h3>
+
+
+
+<a class="topics-links" href="https://blog.codility.com/topic/tech-recruiting"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Reclutamiento técnico </font></font></a>
+
+<a class="topics-links" href="https://blog.codility.com/topic/product-updates"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Actualizaciones de productos </font></font></a>
+
+<a class="topics-links" href="https://blog.codility.com/topic/developer-insights"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Desarrollador Insights </font></font></a>
+
+<a class="topics-links" href="https://blog.codility.com/topic/inside-codility"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Inside Codility </font></font></a>
+
+<a class="topics-links" href="https://blog.codility.com/topic/programming"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Programación </font></font></a>
+
+<a class="topics-links" href="https://blog.codility.com/topic/success-stories"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Historias de éxito</font></font></a>
+</span></div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-27 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-rich_text ver-pad30" style="" data-widget-type="rich_text" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_147136186889624359" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p><a href="http://codility.com/trial" target="_blank" data-mce-target="_blank"><img src="./Soluciones para nuestra tarea Equi_files/Start a Codility Trial.png" title="Comience una versión de prueba gratuita Codility: codility.com/trial" width="320" data-constrained="true" style="width: 320px;" alt="Comience una versión de prueba gratuita Codility: codility.com/trial" caption="false" srcset="https://blog.codility.com/hs-fs/hubfs/Ads/Start%20a%20Codility%20Trial.png?width=160&amp;name=Start%20a%20Codility%20Trial.png 160w, https://blog.codility.com/hs-fs/hubfs/Ads/Start%20a%20Codility%20Trial.png?width=320&amp;name=Start%20a%20Codility%20Trial.png 320w, https://blog.codility.com/hs-fs/hubfs/Ads/Start%20a%20Codility%20Trial.png?width=480&amp;name=Start%20a%20Codility%20Trial.png 480w, https://blog.codility.com/hs-fs/hubfs/Ads/Start%20a%20Codility%20Trial.png?width=640&amp;name=Start%20a%20Codility%20Trial.png 640w, https://blog.codility.com/hs-fs/hubfs/Ads/Start%20a%20Codility%20Trial.png?width=800&amp;name=Start%20a%20Codility%20Trial.png 800w, https://blog.codility.com/hs-fs/hubfs/Ads/Start%20a%20Codility%20Trial.png?width=960&amp;name=Start%20a%20Codility%20Trial.png 960w" sizes="(max-width: 320px) 100vw, 320px"></a></p></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-28 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-rich_text ver-pad30" style="" data-widget-type="rich_text" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_147136187028724668" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><a href="https://codility.com/payments/buy/launch/" target="_blank" data-mce-target="_blank"><img src="./Soluciones para nuestra tarea Equi_files/Try Codility Launch.png" title="Prueba Codility Launch.png" width="320" data-constrained="true" style="width: 320px;" srcset="https://blog.codility.com/hs-fs/hubfs/Ads/Try%20Codility%20Launch.png?width=160&amp;name=Try%20Codility%20Launch.png 160w, https://blog.codility.com/hs-fs/hubfs/Ads/Try%20Codility%20Launch.png?width=320&amp;name=Try%20Codility%20Launch.png 320w, https://blog.codility.com/hs-fs/hubfs/Ads/Try%20Codility%20Launch.png?width=480&amp;name=Try%20Codility%20Launch.png 480w, https://blog.codility.com/hs-fs/hubfs/Ads/Try%20Codility%20Launch.png?width=640&amp;name=Try%20Codility%20Launch.png 640w, https://blog.codility.com/hs-fs/hubfs/Ads/Try%20Codility%20Launch.png?width=800&amp;name=Try%20Codility%20Launch.png 800w, https://blog.codility.com/hs-fs/hubfs/Ads/Try%20Codility%20Launch.png?width=960&amp;name=Try%20Codility%20Launch.png 960w" sizes="(max-width: 320px) 100vw, 320px"></a><a href="https://codility.com/payments/buy/launch/" rel="" target="_blank"></a><a href="http://codility.com/pricing" target="_blank" data-mce-target="_blank"></a></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-29 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-rich_text " style="" data-widget-type="rich_text" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_14794099019856404" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p>&nbsp;</p>
+<p><a href="http://codility.com/programmers" target="_blank" data-mce-target="_blank"><img src="./Soluciones para nuestra tarea Equi_files/Join Codility Programmers Home.png" title="Únase a Codility Programmers Home.png" width="320" data-constrained="true" style="width: 320px;" srcset="https://blog.codility.com/hs-fs/hubfs/Ads/Join%20Codility%20Programmers%20Home.png?width=160&amp;name=Join%20Codility%20Programmers%20Home.png 160w, https://blog.codility.com/hs-fs/hubfs/Ads/Join%20Codility%20Programmers%20Home.png?width=320&amp;name=Join%20Codility%20Programmers%20Home.png 320w, https://blog.codility.com/hs-fs/hubfs/Ads/Join%20Codility%20Programmers%20Home.png?width=480&amp;name=Join%20Codility%20Programmers%20Home.png 480w, https://blog.codility.com/hs-fs/hubfs/Ads/Join%20Codility%20Programmers%20Home.png?width=640&amp;name=Join%20Codility%20Programmers%20Home.png 640w, https://blog.codility.com/hs-fs/hubfs/Ads/Join%20Codility%20Programmers%20Home.png?width=800&amp;name=Join%20Codility%20Programmers%20Home.png 800w, https://blog.codility.com/hs-fs/hubfs/Ads/Join%20Codility%20Programmers%20Home.png?width=960&amp;name=Join%20Codility%20Programmers%20Home.png 960w" sizes="(max-width: 320px) 100vw, 320px"></a></p></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-30 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-global_widget " style="" data-widget-type="global_widget" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_mbspacer" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html" data-global-widget-id="4499895437">
+    <div class="cod-spacer"></div>
+</span></div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-31 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-global_widget " style="" data-widget-type="global_widget" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_mbspacer" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html" data-global-widget-id="4499895437">
+    <div class="cod-spacer"></div>
+</span></div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-32 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_jinja " style="display:none;" data-widget-type="raw_jinja" data-x="0" data-w="12">
+</div><!--end widget-span -->
+
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-33 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell hide-for-list" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-34 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell wrapper" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end body -->
+</div><div class="footer-container-wrapper">
+    <div class="footer-container container-fluid">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-global_group " style="" data-widget-type="global_group" data-x="0" data-w="12">
+<!-- start coded_template: id:4383574484 path:generated_global_groups/4383574479.html -->
+<div class="" data-global-widget-path="generated_global_groups/4383574479.html"><div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell custom-footer-background" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell page-center" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+<div class="row-fluid ">
+<div class="span2 widget-span widget-type-rich_text custom-product" style="" data-widget-type="rich_text" data-x="0" data-w="2">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_1388499827397609" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Producto</font></font></h5>
+<ul>
+<li><a href="https://codility.com/sourcing/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fuente</font></font></a></li>
+<li><a href="https://codility.com/assess/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Evaluar</font></font></a></li>
+<li><a href="https://codility.com/interview/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Entrevista</font></font></a></li>
+<li><a href="https://codility.com/pricing/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Precios</font></font></a></li>
+<li><a href="https://codility.com/customers/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Clientes</font></font></a></li>
+<li><a href="https://codility.com/trial/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prueba gratis</font></font></a></li>
+</ul></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+<div class="span2 widget-span widget-type-rich_text custom-program" style="" data-widget-type="rich_text" data-x="2" data-w="2">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_147521846292911159" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Programadores</font></font></h5>
+<ul>
+<li><a href="https://codility.com/programmers/lessons/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lecciones</font></font></a></li>
+<li><a href="https://codility.com/programmers/challenges/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Desafíos</font></font></a></li>
+<li><a href="https://codility.com/demo/take-sample-test/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prueba Demo</font></font></a></li>
+<li><a href="https://codility.com/candidate-faq/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Preguntas frecuentes del candidato</font></font></a></li>
+</ul></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+<div class="span2 widget-span widget-type-rich_text custom-support" style="" data-widget-type="rich_text" data-x="4" data-w="2">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_139575398594110" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apoyo</font></font></h5>
+<ul>
+<li><a href="https://codility24.zendesk.com/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Centro de ayuda</font></font></a></li>
+<li><a href="https://codility.com/api-general-guidance/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">API y Desarrolladores</font></font></a></li>
+<li><a href="https://codility24.zendesk.com/hc/en-us/articles/202626271-Video-Creating-a-Codility-test"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Crear prueba de Codilidad</font></font></a></li>
+<li><a href="https://codility24.zendesk.com/hc/en-us/articles/204090732-How-to-get-more-candidates-completing-your-tests"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Obtenga más candidatos</font></font></a></li>
+</ul></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+<div class="span2 widget-span widget-type-rich_text custom-legal" style="" data-widget-type="rich_text" data-x="6" data-w="2">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_147521846400811495" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Legal</font></font></h5>
+<ul>
+<li><a href="https://codility.com/terms-of-service-for-companies/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Términos de servicio</font></font></a></li>
+<li><a href="https://codility.com/privacy-policy/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Política de privacidad</font></font></a></li>
+<li><a href="https://codility.com/cookie-policy/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Política de cookies</font></font></a></li>
+</ul></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+<div class="span2 widget-span widget-type-rich_text custom-company" style="" data-widget-type="rich_text" data-x="8" data-w="2">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_139575399545412" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Empresa</font></font></h5>
+<ul>
+<li><a href="https://codility.com/about/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Acerca de</font></font></a></li>
+<li><a href="https://codility.com/jobs/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Trabajos</font></font></a></li>
+<li><a href="https://codility.com/blog/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Blog</font></font></a></li>
+<li><a href="https://vimeo.com/39707925"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cómo contratamos</font></font></a></li>
+</ul></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+<div class="span2 widget-span widget-type-raw_html custom-social-group" style="" data-widget-type="raw_html" data-x="10" data-w="2">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_147521954321717639" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html"><style>
+.custom-social-group i.icon {
+color: #fff;
+}
+</style>
+<h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mantengámonos en contacto</font></font></h5>
+<ul>
+<li><a href="tel:14154668085"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">US 1-415-466-8085</font></font></a></li>
+<li><a href="tel:+4402089707867"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">UK +44 (0) 208 970 78 67</font></font></a></li>
+</ul>
+<p>
+<a href="https://www.linkedin.com/company/codility" target="blank"><i class="linkedin icon mod-footer-icon"></i></a>
+<a href="https://twitter.com/Codility" target="blank"><i class="twitter icon mod-footer-icon"></i></a>
+<a href="https://www.facebook.com/Codility/" target="blank"><i class="facebook icon mod-footer-icon"></i></a>
+<a href="https://github.com/Codility/" target="blank"><i class="github icon mod-footer-icon"></i></a>
+</p></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-rich_text custom-copyright" style="" data-widget-type="rich_text" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_147521847334812956" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p style="color: #fff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">© 2009-2016 Codility Ltd., registrada en Inglaterra y Gales (n.º 7048726). </font><font style="vertical-align: inherit;">ID del IVA GB981191408. </font><font style="vertical-align: inherit;">Domicilio social: 107 Cheapside, Londres EC2V 6DN</font></font></p></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-5 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_html " style="height: 0px; display: none;" data-widget-type="raw_html" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_14752150826507723" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html"><!-- start Main.js DO NOT REMOVE -->
+
+<!-- end Main.js --></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+</div><!-- end coded_template: id:4383574484 path:generated_global_groups/4383574479.html -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_html " style="display:none;" data-widget-type="raw_html" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_14605458076735836" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html"></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end footer -->
+</div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Marco de comunicación de dominio cruzado de Facebook" tabindex="-1" src="./Soluciones para nuestra tarea Equi_files/Ms1VZf1Vg1J.html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div></div><!--end header wrapper -->
+
+<!--end body wrapper -->
+
+<!--end footer wrapper -->
+
+    
+<script type="text/javascript" src="./Soluciones para nuestra tarea Equi_files/public_common.js"></script>
+
+      <script>
+          var _hscLegacy = false;
+      </script>
+      <!--[if lte IE 8]>
+      <script>
+          _hscLegacy = true;
+      </script>
+      <![endif]-->
+      <script type="text/javascript">
+          (function($) {
+              var commentsEmbedContext = {
+                  portalId: 2502692,
+                  collectionId: 4324893661,
+                  contentId: 4630875780,
+                  target: '#comments-listing.new-comments',
+                  showComments: true,
+                  showForm: true,
+                  commentVerificationText: "Thank you for commenting on the Codility blog!",
+                  embedScriptEnv: "prod",
+                  apiEnv: "prod",
+                  isLegacyBrowser: _hscLegacy,
+                  contentTitle: "Solutions for our Equi Task",
+                  contentCreatedAt: "1301068440000",
+                  contentPermalink: "https:\/\/blog.codility.com\/2011\/03\/solutions-for-task-equi.html",
+                  contentAuthorEmail: "walen@codility.com",
+                  contentAuthorName: "Tomasz Wale\u0144",
+                  captchaRequired: false,
+                  captchaKey: "6Lc3uMsSAAAAAMjk4NIvPQK9_-ZLk2wBokFCo5Qt",
+                  maxThreadDepth: 3,
+                  formId: "89a6c0c3-7362-4b15-b5cd-ae73593d215c"
+              };
+              function loadComments() {
+                  if (window.hubspot && typeof window.hubspot.loadCommentsEmbed === 'function') {
+                      hubspot.loadCommentsEmbed(commentsEmbedContext.embedScriptEnv, function() {
+                          if (typeof window.hsEmbedComments === 'function') {
+                              window.hsEmbedComments(commentsEmbedContext);
+                          }
+                      }, _hscLegacy);
+                  } else {
+                    setTimeout(loadComments, 50);
+                  }
+              }
+              loadComments();
+          })(window.hsjQuery || jQuery);
+      </script><script type="text/javascript" src="./Soluciones para nuestra tarea Equi_files/recaptcha_ajax.js" id="hs-cgr-script"></script><script type="text/javascript" src="./Soluciones para nuestra tarea Equi_files/v2.js" id="hs-cfcv2-script"></script><script type="text/javascript" src="./Soluciones para nuestra tarea Equi_files/embed.js" id="hs-cembed-script"></script>
+    
+
+    <!--[if lte IE 8]>
+    <script charset="utf-8" src="https://js.hsforms.net/forms/v2-legacy.js"></script>
+    <![endif]-->
+
+<script src="./Soluciones para nuestra tarea Equi_files/v2.js"></script>
+
+  <script>
+      hbspt.forms.create({
+          portalId: '2502692',
+          formId: '3ae05b02-d5b2-4b71-8179-284fc638c29d',
+          formInstanceId: '2441',
+          pageId: 4630875780,
+          
+          pageName: 'Solutions for our Equi Task',
+          
+          contentType: 'blog-post',
+          
+          inlineMessage: "Thanks for Subscribing!",
+          
+          css: '',
+          target: '#hs_form_target_blog_subscription',
+          
+          formData: {
+            cssClass: 'hs-form stacked'
+          }
+      });
+  </script>
+
+
+<!-- Start of HubSpot Analytics Code -->
+<script type="text/javascript">
+var _hsq = _hsq || [];
+_hsq.push(["setContentType", "blog-post"]);
+_hsq.push(["setCanonicalUrl", "https:\/\/blog.codility.com\/2011\/03\/solutions-for-task-equi.html"]);
+_hsq.push(["setPageId", "4630875780"]);
+_hsq.push(["setContentMetadata", {
+    "contentPageId": 4630875780,
+    "legacyPageId": "4630875780",
+    "contentGroupId": 4324893661,
+    "abTestId": null,
+    "languageVariantId": 4630875780,
+    "languageCode": null
+}]);
+_hsq.push(["setTargetedContentMetadata", []]);
+</script>
+
+<script type="text/javascript" id="hs-script-loader" async="" defer="" src="./Soluciones para nuestra tarea Equi_files/2502692(1).js"></script>
+<!-- End of HubSpot Analytics Code -->
+
+
+<script type="text/javascript">
+var hsVars = {
+    ticks: 1520889338123,
+    page_id: 4630875780,
+    content_group_id: 4324893661,
+    portal_id: 2502692,
+    app_hs_base_url: "https://app.hubspot.com",
+    language: "en",
+    analytics_page_type: "blog-post"
+}
+</script>
+
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>&lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7RZ7WB" height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+ <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript">
+  window.___gcfg = {
+    lang: 'en-US',
+    parsetags: 'onload'
+  };
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+ 
+
+
+    
+    <!-- Generated by the HubSpot Template Builder - template version 1.03 -->
+
+<!-- end coded_template: id:4566281078 path:generated_layouts/4566281073.html -->
+<script src="./Soluciones para nuestra tarea Equi_files/saved_resource" type="text/javascript"></script><iframe scrolling="no" frameborder="0" allowtransparency="true" src="./Soluciones para nuestra tarea Equi_files/widget_iframe.2e798283373a8137c24e277b9b9620d6.html" style="display: none;"></iframe><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="./Soluciones para nuestra tarea Equi_files/translate_24dp.png" width="20" height="20" alt="Google Translate"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Original text</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Contribute a better translation</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./Soluciones para nuestra tarea Equi_files/saved_resource(1).html"></iframe><div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body></html>
